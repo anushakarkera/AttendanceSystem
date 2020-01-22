@@ -1,0 +1,20 @@
+<nav>
+    <a routerLink="/profile"> Profile </a><nav></nav>
+<a routerLink="/logout">Log Out</a>
+</nav><div class="address-card">
+    
+    
+    <table>
+    <tr >
+        
+        <td class="branch">Branch</td>
+        <td class="branch">Year</td>
+        <td class="branch">Sem</td>
+    </tr>
+    <tr class ="table" *ngFor="let class of classes">
+        <td>{{class.branch}}</td>
+        <td>{{class.year}}</td>
+        <td>{{class.sem}}</td>
+    </tr>
+</table>
+</div>

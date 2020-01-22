@@ -1,0 +1,52 @@
+
+
+
+.address-card{
+  background:url(./../../assets/open-book-1428428_1920.jpg) center center no-repeat;
+    text-align:center;
+    background-position: center;
+    color: rgb(27, 18, 18);
+    font-size:100px;
+	background-size:cover;
+  height:100vh;
+  -webkit-margin-start: 2px;
+    -webkit-margin-end: 2px;
+    -webkit-margin-before:0.67en;
+    -webkit-margin-after:0.67en;
+}
+
+table {
+    font-style: italic;
+    height: 100%;
+    width:100%;
+   background-size: cover;
+   padding-top: 50px;
+   padding-bottom: 90px;
+  }
+  nav{
+  
+    font-size: 60px;
+    font-style: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+padding-bottom: 30px;
+display: inline-block;
+  }
+  
+  .branch{
+font-style: initial;
+font-size: larger;
+color:#fe2;
+  }
+/* body{
+  background:url(./../../assets/open-book-1428428_1920.jpg) center center no-repeat;
+  -webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	padding-top:100px;
+  height:auto;
+  -webkit-margin-start: 2px;
+    -webkit-margin-end: 2px;
+    -webkit-margin-before:0.67en;
+    -webkit-margin-after:0.67en;
+} */

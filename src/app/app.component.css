@@ -1,0 +1,15 @@
+div{
+    height: 20%;
+    text-align :center;
+    font-size: 100px;
+    -webkit-margin-start: 2px;
+    -webkit-margin-end: 2px;
+    -webkit-margin-before:0.67en;
+    -webkit-margin-after:0.67en;
+    color:#8d8d8d;
+    font-style: oblique;
+    width:100%;
+    padding-top: 10px;
+    padding-bottom:20px;
+    
+}

@@ -1,0 +1,28 @@
+
+<div class="menu">
+    <a href="#" class="menu-link">
+      <span class="hamburger-icon">
+        <span class="hamburger-bar hamburger-bar-1"></span>
+        <span class="hamburger-bar hamburger-bar-2"></span>
+        <span class="hamburger-bar hamburger-bar-3"></span>
+      </span>
+    </a>
+
+</div>
+<div class="calender">
+<form action="#">
+    Date:
+    <input type="date" name="date">
+    <input type="submit">
+</form>
+</div>
+<br>
+<br><br><br><br>
+<br><br><br>
+<div class="card" *ngFor="let class of classes">
+  
+  <h1>10:00AM {{class.year}}</h1>
+  <p class="branch">Branch:{{class.branch}}</p>
+  <p class="sem">Sem:{{class.sem}}</p>
+  <p><button>Attendance</button></p>
+</div>
