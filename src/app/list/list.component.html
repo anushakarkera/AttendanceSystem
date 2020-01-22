@@ -1,0 +1,80 @@
+<!-- <div class="center">
+    <h1> STUDENT LIST</h1>
+        <table class="rwd-table">
+    
+            <tr>
+            <th>USN</th>
+            <th>NAME</th>
+            <th>Is Present?</th>
+        </tr>
+        <tr *ngFor="let student of student_list;let i=index;">
+            <td data-th="USN">{{student.usn}}</td>
+            <td data-th="NAME">{{student.name}}</td>
+            <div class="slideThree"> 
+            <td data-th="Is Present?">
+                <div class="slideThree">  
+                    <input #checkbox="ngModel" [(ngModel)]="student.isPresent" type="checkbox" value="None" id={{student.usn}} name="check" checked />
+                    <label for="slideThree"></label>
+                  </div>
+            </td>     
+            <td data-th="Is Present?"><input [(ngModel)]="student.isPresent" type ="checkbox" #checkbox="ngModel" id="myCheck" >
+                <label for="slideThree"></label>
+            </td></div> 
+        </tr>
+        <tr><td>
+            <input (click)="onClick()" type="submit" value="Submit">
+        </td></tr>
+    </table>
+    </div>  -->
+    <!-- <script>
+        $( document ).ready(function(){
+    //   Hide the border by commenting out the variable below
+        var $on = 'section';
+        $($on).css({
+          'background':'none',
+          'border':'none',
+          'box-shadow':'none'
+        });
+    }); 
+    </script> -->
+
+<div >
+    <br>
+    <div class="heading"><h3>ATTENDANCE</h3></div>
+    <div class="subheading"><h4>Select those who are absent</h4></div>
+    <div *ngFor="let student of student_list;let i=index;" class="student">
+        <!-- <button class="btn first">{{i+1}}. {{student.name}} </button> -->
+        <!-- <input type="button" id="button" value = "{{i+1}}. {{student.name}}" style= "color:white" onclick="setColor('button', '#101010')"> -->
+        <input  
+        type="button" 
+        id="button" 
+        class="btn first"
+        value="{{i+1}}.       {{student.name}}" 
+        (click)="setColor(i)"
+
+        [class.changecolor]="!student.isPresent"
+
+
+        data-count="1" >
+    </div>
+    <button class="Done">Done</button>
+    <!-- <dialog id="Confirm">
+        <form method="dialog">
+          <p><label>Confirm:
+          </label></p>
+          <menu>
+            <button value="cancel">Cancel</button>
+            <button id="confirmBtn" value="default">Confirm</button>
+          </menu>
+        </form>
+      </dialog>
+      
+<menu>
+    <button id="Done">Done</button>
+  </menu> -->
+  <!-- <button mat-raised-button (click)="openDialogn">Button</Button> -->
+      
+</div>
+    
+    
+    
