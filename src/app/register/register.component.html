@@ -1,0 +1,65 @@
+<div class="container">
+
+    <div class="header">
+        <h2>REGISTRATION PAGE</h2>
+    </div>
+     <!-- <br> -->
+    <div >
+        <img [src]="imageUrl" class="profile">
+        <!-- <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)"> -->
+        </div>
+
+        <div>
+            <input type="file" class="edit" #Image accept="image/*" (change)="handleFileInput($event.target.files)">  
+        </div>
+        <br>
+
+            <div>
+                <input type="text" class="name" name="name" [(ngModel)]="name" required placeholder=" Enter your name"  >
+            </div>
+            <br>
+       
+           <div >
+            <input type="email" class="email"  name="email" [(ngModel)]="email"  required placeholder="Enter email address" >
+           </div>
+           <br>
+           <!-- <br> -->
+
+           <div>
+         <input type="password" class="pass" name="password" [(ngModel)]="password"  required placeholder="Password " >
+           </div>
+           <br>
+
+           <div >
+            <input type="number" class="number" name="phone_number" [(ngModel)]="phone_number"  required placeholder="Phone Number " >
+           </div>
+           <br>
+
+           <div class="Gender">
+            <select class="gender">
+    
+                <option class="color" value="Male">Male</option>
+                <option class="color" value="Female">Female</option>
+           
+            </select>
+           </div>
+           <br>
+
+           <div class="City">
+            <select class="city">
+    
+                <option class="color" value="mangalore">mangalore</option>
+                <option class="color" value="bangalore">bangalore</option>
+                <option class="color" value="mysore">mysore</option>
+                <option class="color" value="udupi">udupi</option>
+           
+            </select>
+
+            
+
+           </div>
+<br>
+           <div  >
+            <button class="column" type="submit" >SIGNUP</button>
+           </div>
+</div>
