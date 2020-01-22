@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingcomponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClassComponent } from './class/class.component';
 
@@ -10,7 +10,7 @@ import { ClassComponent } from './class/class.component';
   declarations: [
     AppComponent,
     ClassComponent,
-   
+   routingcomponents
   ],
   imports: [
     BrowserModule,
