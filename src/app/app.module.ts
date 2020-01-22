@@ -1,15 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule, routingComponents} from './app-routing.module';
+import { AppRoutingModule, routingcomponents} from './app-routing.module';
 import { FormsModule} from '@angular/forms';
 import { BrowserAnimationsModule}  from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
+import { ClassComponent } from './class/class.component';
+import { ProfileComponent } from './profile/profile.component';
+
 
 import { AppComponent } from './app.component';
 import { RegisterComponent} from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents,
+    ClassComponent,
+   routingcomponents,
+   ProfileComponent,
+   LoginComponent,
     RegisterComponent,
   ],
   imports: [
