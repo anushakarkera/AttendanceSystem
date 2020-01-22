@@ -1,6 +1,9 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 
 <body class="align">
+    <div class="head">
+        <h1>Login Form</h1>
+    </div>
 
     <div class="grid">
 
@@ -10,17 +13,21 @@
                 <input [(ngModel)]='username' id="login__username" type="text" name="username" class="form__input" placeholder="Username" required>
             </div>
 
-            <div class="form__field">
+            <div class='buttons' class="form__field">
                 <input [(ngModel)]='password' id="login__password" type="password" name="password" class="form__input" placeholder="Password" required>
             </div>
-
-            <div class="form__field">
-                <input (click)='onClick()' type="submit" value="Sign In">
+            <div class="buttons">
+                <div class="form__field" id="container2">
+                    <input (click)='onClick()' type="submit" value="Login" id="login">
+                </div>
+                <div class="form__field" id="container1">
+                    <input (click)='onClick()' type="submit" value="Sign up" id="signup">
+                </div>
             </div>
 
         </form>
 
-        <p class="text--center">Not a member? <a href="#">Sign up now</a> <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/icons.svg#arrow-right"></use></svg></p>
+        <p class="text--center"><a href="#">Forgot Password?</a> <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/icons.svg#arrow-right"></use></svg></p>
 
     </div>
 
