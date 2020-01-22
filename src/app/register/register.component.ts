@@ -18,6 +18,7 @@ fileToUpload: File=null;
     reader.onload=(event:any) => {
       this.imageUrl =event.target.result;
     }
+    reader.readAsDataURL(this.fileToUpload)
   }
 
 }

@@ -1,16 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AppRoutingModule, routingComponents} from './app-routing.module';
+import { FormsModule} from '@angular/forms';
+import { BrowserAnimationsModule}  from '@angular/platform-browser/animations';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { RegisterComponent} from './register/register.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    routingComponents,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
