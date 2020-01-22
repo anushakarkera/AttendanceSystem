@@ -1,0 +1,91 @@
+#container{
+    width: 100%;
+    padding: 2px;
+    text-align: center;
+}
+.name{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+.email{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+.phno{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+.gender{
+    width: 80%;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+.city{
+    width: 80%;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+.save{
+    width: 80%;
+    background-color: rgba(42, 141, 235, 0.911);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.pofile_img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+#profile_img{
+    margin: 0%;
+    padding-bottom: 8%;
+}
+#Name{
+    padding-top: 2%;
+}
+#Email{
+    padding-top: 2%;
+}
+#PhoneNo{
+    padding-top: 2%;
+}
+#Gender{
+    padding-top: 2%;
+}
+#City{
+    padding-top: 2%;
+}
+#Save{
+    padding-top: 2%;
+}
+#form{
+    padding-top: 10%;
+}
