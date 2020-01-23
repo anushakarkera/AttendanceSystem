@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
-import { ClassComponent } from './class/class.component';
+
 import { ClasslistComponent} from './classlist/classlist.component';
 
 
