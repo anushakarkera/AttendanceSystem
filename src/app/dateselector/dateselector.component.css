@@ -24,10 +24,10 @@
 }
 
 .datepicker .picker-section {
-    margin-left: 3rem;
     margin-bottom: 1rem;  
 }
 .datepicker .picker-section .picker-input {
     border: none;
     text-align: right;
+    font-size: large;
 }

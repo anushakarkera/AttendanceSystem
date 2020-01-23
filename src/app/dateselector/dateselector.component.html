@@ -1,12 +1,12 @@
 <div class="container">
     <div class="datepicker">
         <div class="picker-section">
-            <input class="picker-input" matInput [matDatepicker]="picker" placeholder="Choose a date">
+            <input class="picker-input" matInput [matDatepicker]="picker" placeholder="Choose a date" [value]="startDate" (dateChange)="scrollInto()" (dateInput)="scrollInto()">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker startView="month" [startAt]="startDate"></mat-datepicker>
         </div>        
         <div class="datelist">
-            <div class="date-select" *ngFor="let val of data">
+            <div class="date-select" *ngFor="let val of data" [id]="val.date">
                 <div class="small">{{ val.day }}</div>
                 <div class="large margin-top">{{ val.date }}</div>
             </div>

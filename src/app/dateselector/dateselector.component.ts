@@ -79,4 +79,9 @@ export class DateselectorComponent implements OnInit {
   ngOnInit() {
   }
 
+  scrollInto() {
+    // aiming to do this document.getElementById("31").scrollIntoView({block: "nearest",behavior: "smooth", inline: "start"})
+    document.getElementById("31").scrollIntoView({'block': 'nearest', 'behavior': 'smooth'});
+  }
+
 }
