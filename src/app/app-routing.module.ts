@@ -6,14 +6,16 @@ import { ProfileComponent } from './profile/profile.component';
 import { ListComponent } from './list/list.component';
 import { ClasslistComponent } from './classlist/classlist.component';
 import { LoginComponent } from './login/login.component';
+import { OverlayComponent } from './overlay/overlay.component';
 
 
 const routes: Routes = [
   { path:'register' , component:RegisterComponent },
-  {path : 'studentlist',component: ListComponent},
-{ path:'profile',component: ProfileComponent },
-{path: 'classlist',component:ClasslistComponent},
-{ path:'login', component: LoginComponent}
+  { path : 'studentlist',component: ListComponent},
+  { path:'profile',component: ProfileComponent },
+  { path: 'classlist',component:ClasslistComponent},
+  { path:'login', component: LoginComponent},
+  { path:'overlay', component: OverlayComponent}
 ];
 
 
@@ -29,4 +31,5 @@ export class AppRoutingModule { }
    RegisterComponent,
    ClasslistComponent,
    LoginComponent,
+   OverlayComponent
  ];
