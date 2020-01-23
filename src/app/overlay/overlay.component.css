@@ -56,17 +56,26 @@
     transform: translateY(-7px) translateY(50%) rotate(-45deg);
 }
 
+.picture {
+    padding-top: 5%;
+}
+
+.picture-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
 .menu-overlay {
-    background-color: #32527b;
-    color: #000000;
+    background-color: #4AB3EF;
+    color: #ffffff;
     height: 100%;
     width: 100%;
     position: fixed;
     text-align: center;
     transition: opacity 0.2s ease-in-out;
     z-index: 1;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,7 +115,7 @@ ul {
 }
 
 ul.one {
-    width: 87.563%;
+    width: auto;
 }
 
 li {
@@ -117,17 +126,22 @@ li {
     margin: 5px;
 }
 
+span {
+    display: block;
+    padding-top: 10%;
+}
+
 a {
     display: block;
     position: relative;
-    color: #ffffff;
+    color: #d3d3d3;
     text-decoration: none;
     overflow: hidden;
 }
 
 a.nav-links:hover {
     /*   background-color:#000000; */
-    color: #002552;
+    color: #ffffff;
     transition: 0.6s;
 }
 
