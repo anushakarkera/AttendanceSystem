@@ -9,6 +9,11 @@ import { UploadProfileComponent } from '../upload-profile/upload-profile.compone
 })
 export class RegisterComponent implements OnInit {
   image_Url:string="/assets/signup/img.png"; 
+  public name="";
+  public email="";
+  public password="";
+  public phone_number="";
+
 
   constructor(public dialog: MatDialog) { }
 
