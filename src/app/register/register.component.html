@@ -5,14 +5,13 @@
     </div>
      <!-- <br> -->
     <div >
-        <img [src]="imageUrl" class="profile">
+        <img [src]="image_Url" class="profile">
         <!-- <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)"> -->
         </div>
-
-        <div>
-            <input type="file" class="edit" #Image accept="image/*" (change)="handleFileInput($event.target.files)">  
+    
+        <div class="edit">
+            <button  class="picture" mat-raised-button (click)="editDialog()">UPLOAD PICTURE</button>
         </div>
-        <br>
 
             <div>
                 <input type="text" class="name" name="name" [(ngModel)]="name" required placeholder=" Enter your name"  >
@@ -38,8 +37,8 @@
            <div class="Gender">
             <select class="gender">
     
-                <option class="color" value="Male">Male</option>
-                <option class="color" value="Female">Female</option>
+                <option class="color" value="Male">MALE</option>
+                <option class="color" value="Female">FEMALE</option>
            
             </select>
            </div>
@@ -54,9 +53,6 @@
                 <option class="color" value="udupi">udupi</option>
            
             </select>
-
-            
-
            </div>
 <br>
            <div  >
