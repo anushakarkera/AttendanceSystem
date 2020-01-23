@@ -1,8 +1,6 @@
 <div class="container">
 
-    <div class="header">
-        <h2>REGISTRATION PAGE</h2>
-    </div>
+    <br>
      <!-- <br> -->
     <div >
         <img [src]="image_Url" class="profile">
@@ -45,8 +43,8 @@
            <br>
 
            <div class="City">
-            <select class="city">
-    
+            <select class="city" required>
+                <option value="" disabled>Current City</option>
                 <option class="color" value="mangalore">mangalore</option>
                 <option class="color" value="bangalore">bangalore</option>
                 <option class="color" value="mysore">mysore</option>
@@ -54,7 +52,7 @@
            
             </select>
            </div>
-<br>
+<!-- <br> -->
            <div  >
             <button class="column" type="submit" >SIGNUP</button>
            </div>
