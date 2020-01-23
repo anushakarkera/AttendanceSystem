@@ -1,6 +1,10 @@
 <div class="container">
     <div class="datepicker">
-        <input type="date">
+        <div class="picker-section">
+            <input class="picker-input" matInput [matDatepicker]="picker" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker startView="month" [startAt]="startDate"></mat-datepicker>
+        </div>        
         <div class="datelist">
             <div class="date-select" *ngFor="let val of data">
                 <div class="small">{{ val.day }}</div>

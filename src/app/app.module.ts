@@ -9,7 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { ClassComponent } from './class/class.component';
 import { ClasslistComponent } from './classlist/classlist.component';
 import { CalenderComponent } from './calender/calender.component';
-import { MatDialogModule } from '@angular/material';
+import { MatDialogModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
@@ -33,7 +33,9 @@ import { DateselectorComponent } from './dateselector/dateselector.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   entryComponents: [
     UploadProfileComponent
