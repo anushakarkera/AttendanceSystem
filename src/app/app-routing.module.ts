@@ -11,11 +11,11 @@ import { OverlayComponent } from './overlay/overlay.component';
 
 const routes: Routes = [
   { path:'register' , component:RegisterComponent },
-  { path : 'studentlist',component: ListComponent},
+  {path :'studentlist',component: ListComponent},
   { path:'profile',component: ProfileComponent },
-  { path: 'classlist',component:ClasslistComponent},
+  {path: 'classlist',component:ClasslistComponent},
   { path:'login', component: LoginComponent},
-  { path:'overlay', component: OverlayComponent}
+  { path: 'overlay', component: OverlayComponent}
 ];
 
 
