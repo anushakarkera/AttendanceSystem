@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule,routingComponents } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { ProfileComponent } from './profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -12,8 +12,9 @@ import { CalenderComponent } from './calender/calender.component';
 import { MatDialogModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { RegisterComponent} from './register/register.component';
+import { RegisterComponent } from './register/register.component';
 import { UploadProfileComponent } from './upload-profile/upload-profile.component';
+import { DateselectorComponent } from './dateselector/dateselector.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,10 +22,11 @@ import { UploadProfileComponent } from './upload-profile/upload-profile.componen
     ClasslistComponent,
     CalenderComponent,
     routingComponents,
-   ProfileComponent,
-   LoginComponent,
-   RegisterComponent,
-   UploadProfileComponent,
+    ProfileComponent,
+    LoginComponent,
+    RegisterComponent,
+    UploadProfileComponent,
+    DateselectorComponent,
   ],
   imports: [
     BrowserModule,

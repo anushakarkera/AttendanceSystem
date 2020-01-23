@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="datepicker">
+        <input type="date">
+        <div class="datelist">
+            <div class="date-select" *ngFor="let val of data">
+                <div class="small">{{ val.day }}</div>
+                <div class="large margin-top">{{ val.date }}</div>
+            </div>
+        </div>
+    </div>    
+</div>
