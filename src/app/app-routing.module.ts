@@ -10,10 +10,10 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path:'register' , component:RegisterComponent },
-  {path : 'studentlist',component: ListComponent},
-{ path:'profile',component: ProfileComponent },
-{path: 'classlist',component:ClasslistComponent},
-{ path:'login', component: LoginComponent}
+  {path :'studentlist',component: ListComponent},
+  { path:'profile',component: ProfileComponent },
+  {path: 'classlist',component:ClasslistComponent},
+  { path:'login', component: LoginComponent}
 ];
 
 
@@ -28,5 +28,5 @@ export class AppRoutingModule { }
    ProfileComponent,
    RegisterComponent,
    ClasslistComponent,
-   LoginComponent,
+   LoginComponent
  ];

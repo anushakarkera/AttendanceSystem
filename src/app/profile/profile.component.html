@@ -1,30 +1,13 @@
 <div id="container">
+    <div> 
+        <div class="imageContainer">
+            <img class="img_container" [src]="imageUrl">
+        </div>
+        <div class="editPicture">
+            <button class="edit_picture" mat-raised-button (click)="openDialog()">EDIT PICTURE</button>
+        </div>
+    </div>
     <form id="form" (submit)="userDetails($event)">
-        <div id="heading">
-            <!-- <h2>UPDATE PROFILE</h2> -->
-        </div>
-        <!-- <div id="profile_img">
-            <img class="pofile_img" src="./../../assets/profile_image/profileImage.png" width="150">
-        </div> -->
-
-        <div id="profile_img">
-            <!-- <img class="pofile_img" [src]="imageUrl"> -->
-            <img class="profile_img" src="./../../assets/profile-image/profileImage.jpg" width="150">
-        </div>
-
-        <div id="upLoadImage">
-            <!-- <div class="imageContainer">
-                <img class="img_container" [src]="imageUrl">
-            </div> -->
-            <div class="uploadFile">
-                <!-- <input type="file" #image accept="image/*" (change)="handleFileInput($event.target.files)"> -->
-                <button mat-raised-button (click)="openDialog()">EDIT PICTURE</button>
-            </div>
-            <!-- <div class="imageUploadeButton">
-                <button type="submit" class="uploadbutton">upload</button>
-            </div> -->
-        </div>
-
         <div id="Name">
             <input class="name" type="text" placeholder="Name" id="userName">
         </div>
@@ -43,7 +26,8 @@
         </div>
 
         <div id="City">
-            <select class="city">
+            <select class="city" required>
+                <option value="" disabled >Current City</option>
                 <option value="mangalore">Mangalore</option>
                 <option value="bangalore">Bangalore</option>
                 <option value="mysore">Mysore</option>

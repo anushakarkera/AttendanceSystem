@@ -6,24 +6,31 @@ import { BrowserAnimationsModule}  from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { ClassComponent } from './class/class.component';
 import { ProfileComponent } from './profile/profile.component';
+import { MatDialogModule } from '@angular/material';
 
 
 import { AppComponent } from './app.component';
 import { RegisterComponent} from './register/register.component';
+import { UploadProfileComponent } from './upload-profile/upload-profile.component';
 @NgModule({
   declarations: [
     AppComponent,
     ClassComponent,
-   routingcomponents,
-   ProfileComponent,
-   LoginComponent,
+    routingcomponents,
+    ProfileComponent,
+    LoginComponent,
     RegisterComponent,
+    UploadProfileComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
+    MatDialogModule
+  ],
+  entryComponents: [
+    UploadProfileComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
