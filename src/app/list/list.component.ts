@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { __values } from 'tslib';
 import { CheckboxControlValueAccessor } from '@angular/forms';
+import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-list',
@@ -9,7 +11,7 @@ import { CheckboxControlValueAccessor } from '@angular/forms';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
   public student_list = [{usn: "01", name: "sahana", isPresent : true},
   {usn: "02", name: "abdul affou", isPresent : true},
   {usn: "03", name: "harshita", isPresent : true},
@@ -34,7 +36,21 @@ export class ListComponent implements OnInit {
   
     // e.target.classList.add(status ? 'inactive' : 'active');
     // e.target.classList.remove(status ? 'active' : 'inactive'); 
+
   }
+  confirmList(): void {
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+      panelClass: 'custom-modelBox',
+      width: "390px"
+    });
+
+    dialogRef.afterClosed().subscribe(results => {
+      console.log('The dialog was closed');
+      console.log(results);
+    });
+  
+  }
+
 
   }
 

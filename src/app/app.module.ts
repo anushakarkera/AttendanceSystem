@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { UploadProfileComponent } from './upload-profile/upload-profile.component';
 import { DateselectorComponent } from './dateselector/dateselector.component';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,7 @@ import { DateselectorComponent } from './dateselector/dateselector.component';
     RegisterComponent,
     UploadProfileComponent,
     DateselectorComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import { DateselectorComponent } from './dateselector/dateselector.component';
     MatNativeDateModule
   ],
   entryComponents: [
-    UploadProfileComponent
+    UploadProfileComponent,
+    ConfirmDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
