@@ -150,6 +150,9 @@ h1 {
   .slideThree input[type=checkbox]:checked + label {
     left: 43px;
   } */
+  .container{
+    background-color: rgb(229, 249, 250);
+  }
 
  .heading{
    font-size: 1rem;
@@ -178,8 +181,10 @@ h1 {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-color: transparent;
-  box-shadow: 1rem; 
+  background-color: white;
+  border: none;
+  /* box-shadow: 2px 2px gray; */
+
   
    color:black;
   cursor: pointer;
@@ -237,7 +242,7 @@ h1 {
   /* background-color: transparent; */
   /* border: 2px solid #00a2ff; */
   /* border-radius: 0.6em; */
-  background-color: blue;
+  background-color: rgb(95, 132, 235);
   color: #FFFFFF;
   cursor: pointer;
   /* display: flex; */

@@ -20,10 +20,10 @@ export class ListComponent implements OnInit {
   ngOnInit() {
     this.student_list=this.myservice.getStudentList();
   }
-  onClick()
-  {
-    console.log(this.student_list)
-  }
+  // onClick()
+  // {
+  //   console.log(this.student_list)
+  // }
    setColor(index) {
     this.myservice.updateStudentList(index);
     //     status = e.target.classList.contains('active');
@@ -37,17 +37,11 @@ export class ListComponent implements OnInit {
       panelClass: 'custom-modelBox',
       width: "390px"
     });
-
     dialogRef.afterClosed().subscribe(results => {
       console.log('The dialog was closed');
       console.log(results);
       
     });
-    
-  
-  
-
-
   }
 }
 
