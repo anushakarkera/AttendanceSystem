@@ -1,18 +1,22 @@
 <div class="container">
-
     <br>
-     <!-- <br> -->
-    <div >
+    <!-- <div *ngIf="error" class="alert alert-danger">{{error}}</div> -->
+    <!-- <form [formGroup]="registerform" (ngSubmit)="onSubmit()"> -->
+    
+    <div>
         <img [src]="image_Url" class="profile">
-        <!-- <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)"> -->
+       
         </div>
     
         <div class="edit">
             <button  class="picture" mat-raised-button (click)="editDialog()">UPLOAD PICTURE</button>
         </div>
           <br>
-            <div>
+            <div >
                 <input type="text" class="name" name="name" [(ngModel)]="name" required placeholder=" Enter your name"  >
+            <!-- <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                <div *ngIf="f.name.errrs.required">name is required</div>
+            </div> -->
             </div>
             <br>
        
@@ -54,6 +58,7 @@
            </div>
 <!-- <br> -->
            <div  >
-            <button class="column" type="submit" >SIGNUP</button>
+            <button class="column" type="submit">SIGNUP</button>
            </div>
+           <!-- </form> -->
 </div>
