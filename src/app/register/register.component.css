@@ -17,11 +17,11 @@ text-align: center;
     height: 30px;
     /* padding: 12px 20px; */
     margin: 8px 0;
-    border:none;
+    border:rgb(10, 8, 8);
     border-radius: 8px;
     font-size: 10px;
     cursor: pointer;
-    background-color: rgb(246, 247, 248);
+    background-color: rgb(244, 246, 250);
     outline-color:#4bbeeb ; 
 
 }
@@ -97,7 +97,7 @@ text-align: center;
 
 }
 .column{
-    width: 50%;
+    width: 70%;
     height: 40px;
     padding: 10px 0;
     margin-top: 30px;
