@@ -1,4 +1,4 @@
-
+<div class="entire">
 <div class="menu">
     <a href="#" class="menu-link">
       <span class="hamburger-icon">
@@ -7,32 +7,34 @@
         <span class="hamburger-bar hamburger-bar-3"></span>
       </span>
     </a>
-
 </div>
 
-<div class="calender"*ngFor="let date of dates">
-  
+<!-- <div class="calender"*ngFor="let date of dates"> -->
+  <!--  
 <form action="#">
     Date:
     <input type="date" name="date">
     <input type="submit">
 </form>
-</div>
+</div>-->
+
 <br>
-<br><br><br><br>
-<br><br><br>
+<br>
+<br>
 
 <app-dateselector></app-dateselector>
 
 
+<div>
 <div class="card" *ngFor="let class of classes">
   <div class="details">
   <h1>10:00AM {{class.year}}</h1>
   <p class="branch">Branch:{{class.branch}}</p>
   <p class="sem">Sem:{{class.sem}}</p>
-  
 </div>
 <div class="buttons">
   <button>ATTENDANCE</button>
 </div>
 </div>
+</div>
+
