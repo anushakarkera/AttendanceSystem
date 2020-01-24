@@ -38,14 +38,14 @@
     }); 
     </script> -->
 
-<div >
+<div class="container" >
     <br>
     <div class="heading"><h3>ATTENDANCE</h3></div>
     <div class="subheading"><h4>Select those who are absent</h4></div>
     <div *ngFor="let student of student_list;let i=index;" class="student">
         <!-- <button class="btn first">{{i+1}}. {{student.name}} </button> -->
         <!-- <input type="button" id="button" value = "{{i+1}}. {{student.name}}" style= "color:white" onclick="setColor('button', '#101010')"> -->
-        <input  
+        <input 
         type="button" 
         id="button" 
         class="btn first"
@@ -57,7 +57,7 @@
 
         data-count="1" >
     </div>
-    <button class="edit_picture" mat-raised-button (click)="confirmList()">Done</button>
+    <button class="Done" mat-raised-button (click)="confirmList()">Done</button>
     <!-- <dialog id="Confirm">
         <form method="dialog">
           <p><label>Confirm:

@@ -24,10 +24,10 @@ export class ListComponent implements OnInit {
 
   ngOnInit() {
   }
-  onClick()
-  {
-    console.log(this.student_list)
-  }
+  // onClick()
+  // {
+  //   console.log(this.student_list)
+  // }
    setColor(index) {
      this.student_list[index].isPresent =!this.student_list[index].isPresent;
     // var target = e.target,
@@ -43,7 +43,6 @@ export class ListComponent implements OnInit {
       panelClass: 'custom-modelBox',
       width: "390px"
     });
-
     dialogRef.afterClosed().subscribe(results => {
       console.log('The dialog was closed');
       console.log(results);
@@ -51,7 +50,9 @@ export class ListComponent implements OnInit {
   
   }
 
+  getStudent(){
 
   }
+}
 
 
