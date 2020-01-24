@@ -22,13 +22,13 @@ export class StudentlistService {
     this.student_list[usn].isPresent=!this.student_list[usn].isPresent;
     // console.log(this.student_list[usn].name, this.student_list[usn].isPresent)
   }
-  getAbsentess(): Array<string>{
-    let absentees: string[];
-    for(let student of this.student_list){
-      if(student.isPresent == false){
-        absentees.push(student.usn)
-      }
-    }
-    return absentees;
-  }
+  // getAbsentess(): Array<string>{
+  //   let absentees: string[];
+  //   for(let student of this.student_list){
+  //     if(student.isPresent == false){
+  //       absentees.push(student.usn)
+  //     }
+  //   }
+  //   return absentees;
+  // }
 }

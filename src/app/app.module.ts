@@ -16,6 +16,7 @@ import { RegisterComponent } from './register/register.component';
 import { UploadProfileComponent } from './upload-profile/upload-profile.component';
 import { DateselectorComponent } from './dateselector/dateselector.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+
 @NgModule({
   declarations: [
     AppComponent,
