@@ -3,7 +3,7 @@ import { __values } from 'tslib';
 import { CheckboxControlValueAccessor } from '@angular/forms';
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 import { MatDialog } from '@angular/material';
-
+import { StudentlistService } from './../studentlist.service';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -11,27 +11,21 @@ import { MatDialog } from '@angular/material';
 })
 export class ListComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
-  public student_list = [{usn: "01", name: "sahana", isPresent : true},
-  {usn: "02", name: "abdul affou", isPresent : true},
-  {usn: "03", name: "harshita", isPresent : true},
-{ usn:"04",name:"Yajna", isPresent : true},
-{usn:"05",name:"kushal", isPresent : true},
-{usn:"05",name:"kushal", isPresent : true},
-{usn:"05",name:"kushal", isPresent : true},
-{usn:"05",name:"kushal", isPresent : true},
-{usn:"05=6",name:"kushal", isPresent : true}];
-
+  constructor(public dialog: MatDialog, private myservice: StudentlistService) { }
+// {usn:"05",name:"kushal", isPresent : true},
+// {usn:"05",name:"kushal", isPresent : true},
+// {usn:"05",name:"kushal", isPresent : true},
+// {usn:"05",name:"kushal", isPresent : true}];
+  public student_list;
   ngOnInit() {
+    this.student_list=this.myservice.getStudentList();
   }
   onClick()
   {
     console.log(this.student_list)
   }
    setColor(index) {
-     this.student_list[index].isPresent =!this.student_list[index].isPresent;
-    // var target = e.target,
-    
+    this.myservice.updateStudentList(index);
     //     status = e.target.classList.contains('active');
   
     // e.target.classList.add(status ? 'inactive' : 'active');
@@ -47,11 +41,14 @@ export class ListComponent implements OnInit {
     dialogRef.afterClosed().subscribe(results => {
       console.log('The dialog was closed');
       console.log(results);
+      
     });
+    
   
-  }
+  
 
 
   }
+}
 
 

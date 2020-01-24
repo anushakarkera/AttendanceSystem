@@ -10,7 +10,7 @@ import { ClassComponent } from './class/class.component';
 import { ClasslistComponent } from './classlist/classlist.component';
 import { CalenderComponent } from './calender/calender.component';
 import { MatDialogModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
-
+import { StudentlistService } from './studentlist.service';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { UploadProfileComponent } from './upload-profile/upload-profile.component';
@@ -43,7 +43,7 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     UploadProfileComponent,
     ConfirmDialogComponent
   ],
-  providers: [],
+  providers: [StudentlistService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
