@@ -1,0 +1,33 @@
+.container .datepicker .datelist {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.date-select {
+    padding: 1rem 1.75rem;
+    text-align: center;
+    color: white;
+    background-color: #68a6ee;
+    margin: 0 0.1rem;
+}
+
+.date-select .small {
+    font-size: x-small;
+}
+
+.date-select .large {
+    font-size: x-large;
+}
+
+.date-select .margin-top {
+    margin-top: 0.5rem;
+}
+
+.datepicker .picker-section {
+    margin-bottom: 1rem;  
+}
+.datepicker .picker-section .picker-input {
+    border: none;
+    text-align: right;
+    font-size: large;
+}

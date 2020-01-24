@@ -9,7 +9,9 @@
     </a>
 
 </div>
-<div class="calender">
+
+<div class="calender"*ngFor="let date of dates">
+  
 <form action="#">
     Date:
     <input type="date" name="date">
@@ -19,10 +21,18 @@
 <br>
 <br><br><br><br>
 <br><br><br>
+
+<app-dateselector></app-dateselector>
+
+
 <div class="card" *ngFor="let class of classes">
-  
+  <div class="details">
   <h1>10:00AM {{class.year}}</h1>
   <p class="branch">Branch:{{class.branch}}</p>
   <p class="sem">Sem:{{class.sem}}</p>
-  <p><button>Attendance</button></p>
+  
+</div>
+<div class="buttons">
+  <button>ATTENDANCE</button>
+</div>
 </div>

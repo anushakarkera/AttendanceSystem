@@ -26,6 +26,11 @@ export class ClasslistComponent implements OnInit {
     branch:"civil",
     year:"second",
     sem:"1"
+  },
+  {
+    branch:"civil",
+    year:"third",
+    sem:"5"
   }
   ]
   

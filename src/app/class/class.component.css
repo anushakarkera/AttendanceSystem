@@ -1,8 +1,6 @@
-
-
-
+/* 
 .address-card{
-  background:url(./../../assets/open-book-1428428_1920.jpg) center center no-repeat;
+ 
     text-align:center;
     background-position: center;
     color: rgb(27, 18, 18);
@@ -35,7 +33,7 @@ display: inline-block;
   .branch{
 font-style: initial;
 font-size: larger;
-color:#fe2;
+columns: #000000;;
   }
 /* body{
   background:url(./../../assets/open-book-1428428_1920.jpg) center center no-repeat;
