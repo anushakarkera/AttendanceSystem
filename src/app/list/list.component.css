@@ -234,6 +234,7 @@ h1 {
   color: white;
 }
 .Done{
+
   box-sizing: unset;
   width: -webkit-fill-available;
   -webkit-appearance: none;
