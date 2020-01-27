@@ -27,7 +27,7 @@
 
 .date-select .margin-top {
     margin-top: 0.5rem;
-  
+  text-align:center;
 }
 
 .datepicker .picker-section {
@@ -36,7 +36,7 @@
 }
 .datepicker .picker-section .picker-input {
 border:none;
-    text-align: right;
+    text-align: center;
     font-size: large;
     color:rgb(148, 203, 235);
 }
