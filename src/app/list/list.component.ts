@@ -22,6 +22,8 @@ export class ListComponent implements OnInit {
 {usn:"05",name:"kushal", isPresent : true},
 {usn:"05=6",name:"kushal", isPresent : true}];
 
+
+
   ngOnInit() {
   }
   // onClick()
@@ -30,22 +32,27 @@ export class ListComponent implements OnInit {
   // }
    setColor(index) {
      this.student_list[index].isPresent =!this.student_list[index].isPresent;
+    
     // var target = e.target,
     
     //     status = e.target.classList.contains('active');
   
     // e.target.classList.add(status ? 'inactive' : 'active');
     // e.target.classList.remove(status ? 'active' : 'inactive'); 
+    
 
   }
+
+  
   confirmList(): void {
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
       panelClass: 'custom-modelBox',
-      width: "390px"
+      width: "390px",
+
     });
-    dialogRef.afterClosed().subscribe(results => {
+    dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      console.log(results);
+      console.log(result);
     });
   
   }
