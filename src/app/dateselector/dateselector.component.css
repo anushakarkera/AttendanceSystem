@@ -35,6 +35,7 @@
     color: rgb(148, 203, 235);
 }
 .datepicker .picker-section .picker-input {
+    background-color: transparent;
 border:none;
     text-align: right;
     font-size: large;
