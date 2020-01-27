@@ -1,5 +1,11 @@
 <div class="entire">
+
+  <div>
   <app-main-nav></app-main-nav>
+  </div>
+
+
+  
  <!--  
 <div class="menu">
     <a href="#" class="menu-link">
@@ -22,23 +28,25 @@
 </form>
 </div>-->
 
-<br>
-<br>
-<br>
-
-<app-dateselector></app-dateselector>
-
 
 <div>
+<app-dateselector></app-dateselector>
+</div>
+
+
+<div class="cards-container">
 <div class="card" *ngFor="let class of classes">
   <div class="details">
-  <h1>{{class.time}} {{class.year}}</h1>
-  <p class="branch">Branch:{{class.branch}}</p>
-  <p class="sem">Sem:{{class.sem}}</p>
+    <h1>{{class.time}} {{class.year}}</h1>
+    <p class="branch">Branch:{{class.branch}}</p>
+    <p class="sem">Sem:{{class.sem}}</p>
+  </div>
+  <div class="buttons">
+    <button>ATTENDANCE</button>
+  </div>
 </div>
-<div class="buttons">
-  <button>ATTENDANCE</button>
 </div>
-</div>
+
+
 </div>
 
