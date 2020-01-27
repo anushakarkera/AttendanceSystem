@@ -42,7 +42,8 @@
     <br>
     <div class="heading"><h3>ATTENDANCE</h3></div>
     <div class="subheading"><h4>Select those who are absent</h4></div>
-    <div *ngFor="let student of student_list;let i=index;" class="student">
+    <div
+     class="fixed" *ngFor="let student of student_list;let i=index;" class="student">
         <!-- <button class="btn first">{{i+1}}. {{student.name}} </button> -->
         <!-- <input type="button" id="button" value = "{{i+1}}. {{student.name}}" style= "color:white" onclick="setColor('button', '#101010')"> -->
         <input 
@@ -57,6 +58,7 @@
 
         data-count="1" >
     </div>
+    <div class="fixed">
     <button class="Done" mat-raised-button (click)="confirmList()">Done</button>
     <!-- <dialog id="Confirm">
         <form method="dialog">
@@ -73,7 +75,7 @@
     <button id="Done">Done</button>
   </menu> -->
   <!-- <button mat-raised-button (click)="openDialogn">Button</Button> -->
-      
+      </div>
 </div>
     
     

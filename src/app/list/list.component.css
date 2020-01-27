@@ -170,8 +170,14 @@ h1 {
 .Done{
   align-items: center;
   margin:50;
+  position: fixed;
+  left: 44%;
+  top: 85%;
+  transform: translateX(-50%);
 }
+.fixed{
 
+}
 
 
 .btn {
