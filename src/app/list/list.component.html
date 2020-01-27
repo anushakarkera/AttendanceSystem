@@ -26,7 +26,7 @@
         </td></tr>
     </table>
     </div>  -->
-    <!-- <script>
+<!-- <script>
         $( document ).ready(function(){
     //   Hide the border by commenting out the variable below
         var $on = 'section';
@@ -38,29 +38,29 @@
     }); 
     </script> -->
 
-<div class="container" >
-    <br>
-    <div class="heading"><h3>ATTENDANCE</h3></div>
-    <div class="subheading"><h4>Select those who are absent</h4></div>
-    <div
-     class="fixed" *ngFor="let student of student_list;let i=index;" class="student">
-        <!-- <button class="btn first">{{i+1}}. {{student.name}} </button> -->
-        <!-- <input type="button" id="button" value = "{{i+1}}. {{student.name}}" style= "color:white" onclick="setColor('button', '#101010')"> -->
-        <input 
-        type="button" 
-        id="button" 
-        class="btn first"
-        value="{{i+1}}.       {{student.name}}" 
-        (click)="setColor(i)"
-
-        [class.changecolor]="!student.isPresent"
+<div class="main_container">
 
 
-        data-count="1" >
+    <div class="container">
+        <br>
+        <div class="heading">
+            <h3>ATTENDANCE</h3>
+        </div>
+        <div class="subheading">
+            <h4>Select those who are absent</h4>
+        </div>
+        <div class="fixed" *ngFor="let student of student_list;let i=index;" class="student">
+            <!-- <button class="btn first">{{i+1}}. {{student.name}} </button> -->
+            <!-- <input type="button" id="button" value = "{{i+1}}. {{student.name}}" style= "color:white" onclick="setColor('button', '#101010')"> -->
+            <input type="button" id="button" class="btn first" value="{{i+1}}.       {{student.name}}"
+                (click)="setColor(i)" [class.changecolor]="!student.isPresent" data-count="1">
+        </div>
+
     </div>
+
     <div class="fixed">
-    <button class="Done" mat-raised-button (click)="confirmList()">Done</button>
-    <!-- <dialog id="Confirm">
+        <button class="Done" mat-raised-button (click)="confirmList()">Done</button>
+        <!-- <dialog id="Confirm">
         <form method="dialog">
           <p><label>Confirm:
           </label></p>
@@ -74,9 +74,7 @@
 <menu>
     <button id="Done">Done</button>
   </menu> -->
-  <!-- <button mat-raised-button (click)="openDialogn">Button</Button> -->
-      </div>
+        <!-- <button mat-raised-button (click)="openDialogn">Button</Button> -->
+    </div>
+
 </div>
-    
-    
-    
