@@ -1,4 +1,6 @@
 <div class="entire">
+  <app-main-nav></app-main-nav>
+ <!--  
 <div class="menu">
     <a href="#" class="menu-link">
       <span class="hamburger-icon">
@@ -8,6 +10,8 @@
       </span>
     </a>
 </div>
+-->
+
 
 <!-- <div class="calender"*ngFor="let date of dates"> -->
   <!--  
@@ -28,7 +32,7 @@
 <div>
 <div class="card" *ngFor="let class of classes">
   <div class="details">
-  <h1>10:00AM {{class.year}}</h1>
+  <h1>{{class.time}} {{class.year}}</h1>
   <p class="branch">Branch:{{class.branch}}</p>
   <p class="sem">Sem:{{class.sem}}</p>
 </div>
