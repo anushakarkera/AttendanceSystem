@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { UploadProfileComponent } from '../upload-profile/upload-profile.component';
+// import { FormGroup, FormBuilder } from '@angular/forms';
+// import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-register',
@@ -13,6 +15,12 @@ export class RegisterComponent implements OnInit {
   public email="";
   public password="";
   public phone_number="";
+
+  // registerForm: FormGroup;
+  // loading = false;
+  // submitted = false;
+  // error : string;
+
 
 
   constructor(public dialog: MatDialog) { }
@@ -38,3 +46,12 @@ export class RegisterComponent implements OnInit {
     });
   }
 }
+// function ValidateEmail(email) 
+// {
+//  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))
+//   {
+//     return (true)
+//   }
+//     alert("You have entered an invalid email address!")
+//     return (false)
+// }

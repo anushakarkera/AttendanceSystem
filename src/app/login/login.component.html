@@ -7,7 +7,7 @@
 
     <div class="grid">
 
-        <form action="https://httpbin.org/post" method="POST" class="form login">
+        <form class="form login">
 
             <div class="form__field">
                 <input [(ngModel)]='username' id="login__username" type="text" name="username" class="form__input" placeholder="Username" required>
@@ -16,14 +16,14 @@
             <div class='buttons' class="form__field">
                 <input [(ngModel)]='password' id="login__password" type="password" name="password" class="form__input" placeholder="Password" required>
             </div>
-            <p class="text--center"><a href="#">Forgot Password?</a> <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/icons.svg#arrow-right"></use></svg></p>
+            <p class="text--center"><a routerLink="/forgotpassword">Forgot Password?</a> <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/icons.svg#arrow-right"></use></svg></p>
 
             <div class="buttons">
                 <div class="form__field" id="container2">
                     <input (click)='onClick()' type="submit" value="Login" id="login">
                 </div>
                 <div class="form__field" id="container1">
-                    <input (click)='onClick()' type="submit" value="Sign up" id="signup">
+                    <input (click)="onSignup()" type="submit" value="Sign up" id="signup">
                 </div>
             </div>
 
