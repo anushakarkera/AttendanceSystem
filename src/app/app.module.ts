@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule} from '@angular/forms';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { ProfileComponent } from './profile/profile.component';
@@ -17,6 +18,7 @@ import { UploadProfileComponent } from './upload-profile/upload-profile.componen
 import { DateselectorComponent } from './dateselector/dateselector.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,12 +36,14 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     MatDialogModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    HttpClientModule
   ],
   entryComponents: [
     UploadProfileComponent,
