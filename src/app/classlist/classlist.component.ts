@@ -8,31 +8,38 @@ import { Component, OnInit } from '@angular/core';
 export class ClasslistComponent implements OnInit {
   classes =[
     { 
+      time:"10:00 AM",
       branch:"cse",
       year:"first",
       sem:"1"
     },
     {
+      time:"09:00 AM",
       branch:"ise",
       year:"first",
       sem:"1"
     },
     {
+      time:"12:00 PM",
       branch:"mech",
   year:"first",
   sem:"1"
   },
   {
+    time:"11:00 AM",
     branch:"civil",
     year:"second",
-    sem:"1"
+    sem:"3"
   },
   {
+    time:"3:00 PM",
     branch:"civil",
     year:"third",
     sem:"5"
   }
   ]
+  
+
   
   constructor() { }
 
