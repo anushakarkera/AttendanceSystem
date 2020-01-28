@@ -51,3 +51,9 @@ mat-datepicker-toggle{
     border-radius: 50%;
     color: rgb(148, 203, 235);
 }
+
+.background_blue{
+    background-color: #4AB3EF;
+    color: white;
+}
+
