@@ -15,7 +15,7 @@ export class ProfileComponent implements OnInit {
   imageUrl : string = "/assets/profile-image/profileImage.jpg"; 
   DialogService: any;
 
-  luserDetails(event){
+  userDetails(event){
     event.preventDefault()
     const target = event.target
     const name = target.querySelector('#userName').value

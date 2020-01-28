@@ -1,4 +1,46 @@
+<<<<<<< HEAD
 
+=======
+<!-- <div class="center">
+    <h1> STUDENT LIST</h1>
+        <table class="rwd-table">
+    
+            <tr>
+            <th>USN</th>
+            <th>NAME</th>
+            <th>Is Present?</th>
+        </tr>
+        <tr *ngFor="let student of student_list;let i=index;">
+            <td data-th="USN">{{student.usn}}</td>
+            <td data-th="NAME">{{student.name}}</td>
+            <div class="slideThree"> 
+            <td data-th="Is Present?">
+                <div class="slideThree">  
+                    <input #checkbox="ngModel" [(ngModel)]="student.isPresent" type="checkbox" value="None" id={{student.usn}} name="check" checked />
+                    <label for="slideThree"></label>
+                  </div>
+            </td>     
+            <td data-th="Is Present?"><input [(ngModel)]="student.isPresent" type ="checkbox" #checkbox="ngModel" id="myCheck" >
+                <label for="slideThree"></label>
+            </td></div> 
+        </tr>
+        <tr><td>
+            <input (click)="onClick()" type="submit" value="Submit">
+        </td></tr>
+    </table>
+    </div>  -->
+<!-- <script>
+        $( document ).ready(function(){
+    //   Hide the border by commenting out the variable below
+        var $on = 'section';
+        $($on).css({
+          'background':'none',
+          'border':'none',
+          'box-shadow':'none'
+        });
+    }); 
+    </script> -->
+>>>>>>> a0fa21e7be0bf362a189ba6fa7d41fb7eff384c7
 
 <div class="main_container">
 
@@ -20,7 +62,24 @@
     </div>
     <div>
     <button class="Done" mat-raised-button (click)="confirmList()">Done</button>
+<<<<<<< HEAD
   
+=======
+    <!-- <dialog id="Confirm">
+        <form method="dialog">
+          <p><label>Confirm:
+          </label></p>
+          <menu>
+            <button value="cancel">Cancel</button>
+            <button id="confirmBtn" value="default">Confirm</button>
+          </menu>
+        </form>
+      </dialog>
+<menu>
+    <button id="Done">Done</button>
+  </menu> -->
+        <!-- <button mat-raised-button (click)="openDialogn">Button</Button> -->
+>>>>>>> a0fa21e7be0bf362a189ba6fa7d41fb7eff384c7
     </div>
 
 </div>
