@@ -26,6 +26,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,19 @@ import { MatListModule } from '@angular/material/list';
     MatDialogModule,
     MatDatepickerModule,
     MatNativeDateModule,
+<<<<<<< HEAD
     HttpClientModule
+=======
+    HttpClientModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    HttpClientModule
+
+>>>>>>> 7cd6edc786c8b4c8b6cd0432373232dd19522796
   ],
   entryComponents: [
     UploadProfileComponent,

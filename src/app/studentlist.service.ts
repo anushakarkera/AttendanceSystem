@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,14 @@ export class StudentlistService {
   {usn: "08", name: "harshita", isPresent : true},
   { usn:"09",name:"Yajna", isPresent : true},
   {usn:"10",name:"kushal", isPresent : true}];
-  constructor() { }
+  constructor( private httpclient : HttpClient) { }
+  getDetails() : Promise<any>{
+    return this.httpclient.get("https://newsapi.org/v2/everything?q=bitcoin&from=2019-12-28&sortBy=publishedAt&apiKey=0aa6d01ed30547f3bfdec2b54035b2b7")
+    .toPromise();
+  }
+
+
+
   getStudentList(){
     return this.student_list;
   }
