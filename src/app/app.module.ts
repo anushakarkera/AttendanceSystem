@@ -25,6 +25,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import {HttpClientModule} from  '@angular/common/http';
+import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +52,7 @@ import { MatListModule } from '@angular/material/list';
     MatDialogModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    HttpClientModule,
+    // HttpClientModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
