@@ -18,7 +18,7 @@ import { UploadProfileComponent } from './upload-profile/upload-profile.componen
 import { DateselectorComponent } from './dateselector/dateselector.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { HttpClientModule } from '@angular/common/http';
+// import { HttpClientModule } from '@angular/common/http';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
