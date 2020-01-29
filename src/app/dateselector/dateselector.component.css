@@ -1,8 +1,6 @@
 .container .datepicker .datelist {
     display: flex;
     overflow-x: scroll;
-   
-   
 }
 
 .date-select {
@@ -10,24 +8,21 @@
     text-align: center;
     background-color: #fff;
     margin: 0 0.1rem;
-    
     border-radius:6px;
 
 }
 
 .date-select .small {
     font-size: medium;
-   
 }
 
 .date-select .large {
     font-size: x-large;
-   
 }
 
 .date-select .margin-top {
     margin-top: 0.5rem;
-  text-align:center;
+    text-align:center;
 }
 
 .datepicker .picker-section {
@@ -36,7 +31,7 @@
 }
 .datepicker .picker-section .picker-input {
     background-color: transparent;
-border:none;
+    border:none;
     text-align: center;
     font-size: large;
     color:rgb(148, 203, 235);
@@ -51,3 +46,9 @@ mat-datepicker-toggle{
     border-radius: 50%;
     color: rgb(148, 203, 235);
 }
+
+.background_blue{
+    background-color: #4AB3EF;
+    color: white;
+}
+

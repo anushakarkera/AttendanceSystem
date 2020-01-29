@@ -70,7 +70,7 @@
     background-color: #4AB3EF;
     color: #ffffff;
     height: 100%;
-    width: 100%;
+    width: 56%;
     position: fixed;
     text-align: center;
     transition: opacity 0.2s ease-in-out;
@@ -85,6 +85,7 @@
 .menu-overlay.open {
     opacity: 1;
     visibility: visible;
+    width:50%;
 }
 
 .prompt {
@@ -149,7 +150,11 @@ a.nav-links:hover {
     display: inline-block;
     margin: 0 10px 0 10px;
 }
-
+.picture-container[_ngcontent-uxb-c7] {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
 input[type=text] {
     width: 130px;
     border: 2px solid #ffffff;
