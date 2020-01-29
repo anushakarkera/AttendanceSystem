@@ -19,6 +19,9 @@ export class ListComponent implements OnInit {
   public student_list;
   ngOnInit() {
     this.student_list=this.myservice.getStudentList();
+
+    this.myservice.getDetails()
+    .then(data => console.log(data));
   }
   // onClick()
   // {

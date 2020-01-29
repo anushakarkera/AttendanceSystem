@@ -7,8 +7,12 @@
             <mat-datepicker #picker startView="month" [startAt]="startDate" (selectedChanged)="onDate($event)"></mat-datepicker>
         </div> 
         <div class="datelist">
+<<<<<<< HEAD
             
             <div class="date-select" *ngFor="let val of days" [id]="val.getDate()" (click)="onDateClicked(val.getDate())">
+=======
+            <div class="date-select" *ngFor="let val of days" [id]="val.getDate()" [class.background_blue]="selectedId == val.getDate()" (click)="onDateClicked(val.getDate())">
+>>>>>>> bdde27d39966250e10036db73316287138ff715b
                 <div class="small">{{ weeks[val.getDay()] }}</div>
                 <div class="large margin-top">{{ val.getDate() }}</div>
             </div>
