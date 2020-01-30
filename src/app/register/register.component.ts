@@ -44,7 +44,24 @@ export class RegisterComponent implements OnInit {
     return this.registerForm.controls;
     }
   
-   OnSubmit(){
+   OnSubmit(event){
+    event.preventDefault()
+    const target = event.target;
+    const name = target.querySelector('#name').value
+    const email = target.querySelector('#email').value
+    const password = target.querySelector('#password').value
+    const phone = target.querySelector('#phone_number').value
+
+    console.log(name)
+    console.log(email)
+    console.log(password)
+    console.log(phone)
+
+    localStorage.setItem("Name" , name);
+    localStorage.setItem("Email" , email);
+    localStorage.setItem("Password" , password);
+    localStorage.setItem("Phone" , phone);
+
     this.submitted = true;
     
      console.log(this.registerForm.value)

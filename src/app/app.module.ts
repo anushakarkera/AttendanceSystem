@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule} from '@angular/forms';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { ProfileComponent } from './profile/profile.component';
@@ -44,6 +45,7 @@ import { from } from 'rxjs';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
