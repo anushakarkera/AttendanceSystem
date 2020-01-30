@@ -16,7 +16,7 @@
 
 
             <div  class="form-group">
-                <input type="text" formControlName="name" class="form-control" id="name" class="name" name="name"  placeholder=" Enter your name" [ngClass]="{'is-invalid': submitted && fval.name.errors}">
+                <input type="text" formControlName="name" class="form-control" id="name" class="name" name="name"  placeholder=" Enter your name" [ngClass]="{'is-invalid': submitted && fval.name.errors}" maxlength="20">
                 <div *ngIf="submitted && fval.name.errors" class="invalid-feedback">
                     <div *ngIf="fval.name.errors.required">Name is required</div>
                 </div>
@@ -47,16 +47,18 @@
 
 
            <div class="form-group">
-            <input type="text"  formControlanme="phone_number" id="phone_number" class="number" name="phone_number"  placeholder="Phone Number " [ngClass]="{'is-invalid': submitted && fval.phone_number.invalid}" required maxlength="12" minlength="10">
+            <input type="number" pattern="[0-9]{10,10}"  formControlName="phone_number" id="phone_number" class="number" name="phone_number"  placeholder="Phone Number" [ngClass]="{'is-invalid': submitted && fval.phone_number.invalid}" required max="12" min="10">
             <!-- <div *ngIf="submitted && fval.phone_number.errors" class="invalid-feedback">
                 <div *ngIf="fval.phone_number.errors.required">phone_number is required</div>
-            </div> -->
+                <div *ngIf="fval.phone_number.errors.minlength"></div>
+            </div>  -->
         </div>
            <br>
 
         
            <div class="Gender form-group">
-            <select class="gender"  formControlanme="gender">
+            <select class="gender" formControlName="gender">
+                <option value="" disabled>MALE</option>
                 <option class="color" value="Male">MALE</option>
                 <option class="color" value="Female">FEMALE</option>
             </select>
@@ -66,7 +68,7 @@
 
 
            <div class="City form-group">
-            <select class="city"  formControlanme="city" required>
+            <select class="city"  formControlName="city" required>
                 <option value="" disabled>Current City</option>
                 <option class="color" value="mangalore">mangalore</option>
                 <option class="color" value="bangalore">bangalore</option>

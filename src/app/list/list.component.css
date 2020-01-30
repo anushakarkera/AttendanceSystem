@@ -151,9 +151,16 @@ h1 {
     left: 43px;
   } */
   .container{
-    height: 94%;
+    height: 92%;
     overflow-y: scroll;
     /* background-color: rgb(229, 249, 250); */
+    background-color: #F3F8Fc;
+  }
+
+  .main{
+    width: -webkit-fill-available;
+    /* position: fixed; */
+    
   }
 
  .heading{
@@ -169,18 +176,15 @@ h1 {
  width: 100%;
 
 }
-.Done{
-  /* align-items: center;
-  margin:50;
-  position: fixed;
-  left: 44%;
-  top: 85%;
-  transform: translateX(-50%); */
-}
+
 .fixed{
   height: 5%;
 }
-
+.list{
+  overflow: scroll;
+  width: -webkit-fill-available;
+    height: 465px;
+}
 
 .btn {
   outline: none;

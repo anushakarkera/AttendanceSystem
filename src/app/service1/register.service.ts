@@ -7,11 +7,12 @@ import { HttpClient } from '@angular/common/http';
 export class RegisterService {
 
 
+
   constructor( private httpclient : HttpClient) {}
     
      getRegisterdetails(){
-       console.log("fxdhgfdghvnb")
-       return this.httpclient.post<any>('http://juegostudio.in:3018/user/signup', { name :'name',email:'email',password:'password'})
+       
+       return this.httpclient.post<any>('http://juegostudio.in:3021/user/signup',{})
      
    }
 }
