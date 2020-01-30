@@ -40,6 +40,7 @@ import { from } from 'rxjs';
     DateselectorComponent,
     ConfirmDialogComponent,
     ForgotPasswordComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
