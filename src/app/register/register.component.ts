@@ -31,7 +31,7 @@ export class RegisterComponent implements OnInit {
     
     this.registerForm = this.formBuilder.group({
       name: ['',Validators.required],
-      email: ['',Validators.compose([Validators.required,Validators.email])],
+      email: ['',[Validators.required,Validators.email]],
       password:['',Validators.compose([Validators.required,Validators.minLength(6)])],
       phone_number: ['',Validators.compose([Validators.required,Validators.min(10),Validators.max(12)])],
       gender : ['',Validators.required],
@@ -56,7 +56,7 @@ export class RegisterComponent implements OnInit {
        console.log("INVALID")
        return;
      }
-    alert("SUCESS");
+    alert("SUCCESS");
      this.router.navigate(['/login']);
    }
 
