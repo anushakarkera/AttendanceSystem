@@ -1,6 +1,20 @@
 
+<<<<<<< HEAD
 button{
     width: 50%;
     padding: 2%;
     padding-right: 5%;
+=======
+.uploaCancel{
+    width: -webkit-fill-available;
+    text-align: center;
+    background-color: rgb(194, 194, 194);
+    display: inline-block;
+>>>>>>> 19d88272f990236310ed21aaea57e9f2e364188e
+}
+.upload{
+    width: -webkit-fill-available;
+    background-color: rgb(194, 194, 194);
+    display: inline-block;
+    
 }

@@ -1,6 +1,7 @@
 #container{
     width: 100%;
     height: 100%;
+    overflow-y: scroll;
     /* padding: 2px; */
     text-align: center;
     overflow: hidden;    
@@ -42,7 +43,7 @@
     display: inline-block;
     border: 1px solid #ccc;
     padding: 12px 20px;
-    border-radius: solid 8px;
+    border-radius: 8px;
     box-sizing: border-box;
     outline-color: rgb(13, 158, 255);
 }
@@ -69,8 +70,8 @@
 }
 .edit_picture{
     width: 40%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    padding: 1%;
+    margin: 0 ;
     border: none;
     border-radius: 8px;
     cursor: pointer;

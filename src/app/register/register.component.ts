@@ -15,14 +15,12 @@ import { RegisterService } from '../service1/register.service';
 
 
 export class RegisterComponent implements OnInit {
-  // gender: any = ['male','female']
-  // [x: string]: any;
+  
   image_Url:string="/assets/signup/img.png"; 
   
 
   registerForm: FormGroup;
   submitted = false;
-  
   
   
   constructor(private router: Router,public dialog: MatDialog,private formBuilder:FormBuilder,private registerService : RegisterService) { }
@@ -31,7 +29,7 @@ export class RegisterComponent implements OnInit {
     
     this.registerForm = this.formBuilder.group({
       name: ['',Validators.required],
-      email: ['',Validators.compose([Validators.required,Validators.email])],
+      email: ['',[Validators.required,Validators.email]],
       password:['',Validators.compose([Validators.required,Validators.minLength(6)])],
       phone_number: ['',Validators.compose([Validators.required,Validators.min(10),Validators.max(12)])],
       gender : ['',Validators.required],
@@ -44,19 +42,18 @@ export class RegisterComponent implements OnInit {
     return this.registerForm.controls;
     }
   
-   OnSubmit(){
+   OnSubmit(event){
+    
     this.submitted = true;
-    
      console.log(this.registerForm.value)
-    this.registerService.getRegisterdetails()
-    .subscribe(data => console.log(data));
-    
 
-     if(this.registerForm.invalid){
-       console.log("INVALID")
-       return;
-     }
-    alert("SUCESS");
+    //  if(this.registerForm.invalid){
+    //   console.log("INVALID")
+    //   return;
+    // }
+    this.registerService.getRegisterdetails(this.registerForm.value)
+    .subscribe(data => console.log(data));
+    alert("SUCCESS");
      this.router.navigate(['/login']);
    }
 
