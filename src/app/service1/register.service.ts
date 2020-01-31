@@ -10,6 +10,7 @@ export class RegisterService {
 
 
   constructor( private httpclient : HttpClient) {}
+  
     
      getRegisterdetails(register){
        
