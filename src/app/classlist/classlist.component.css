@@ -76,6 +76,7 @@
     position: relative;
     font-size: 18px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#A6A6A6;
   }
   .sem{
 
@@ -89,7 +90,7 @@
     margin-bottom:10px;
 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+   color:#A6A6A6; 
   }
   .card {
    
@@ -153,6 +154,7 @@ align-self: center;
   h1{
     font-size: 20px;
     margin-top: 10%;
+    color:rgb(32, 32, 32);
   }
   body{
     background-color: #68aeffef;
