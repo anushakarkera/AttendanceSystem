@@ -2,7 +2,9 @@
     
     <div class="datepicker">
         <div class="picker-section">
-            <input class="picker-input" matInput [matDatepicker]="picker" placeholder="Choose a date" [value]="startDate"  (dateInput)="scrollInto($event)">
+             <input class="picker-input"  matInput [matDatepicker]="picker" placeholder="Choose a date"  [value]="startDate"  (dateInput)="scrollInto($event)"  >
+             
+           
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker startView="month" [startAt]="startDate" (selectedChanged)="onDate($event)"></mat-datepicker>
         </div> 
@@ -11,7 +13,6 @@
                 <div class="small">{{ weeks[val.getDay()] }}</div>
                 <div class="large margin-top">{{ val.getDate() }}</div>
             </div>
-           
         </div>
     </div>    
 </div>

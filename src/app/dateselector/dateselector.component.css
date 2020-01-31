@@ -7,7 +7,7 @@
     padding: 1rem 1.75rem;
     text-align: center;
     background-color: #fff;
-    margin: 0 0.1rem;
+    margin: 0 0.33rem;
     border-radius:6px;
 
 }
@@ -32,10 +32,23 @@
 .datepicker .picker-section .picker-input {
     background-color: transparent;
     border:none;
-    text-align: center;
     font-size: large;
     color:rgb(148, 203, 235);
 }
+    .datepicker[_ngcontent-ifn-c3] .picker-section[_ngcontent-ifn-c3] {
+        margin-bottom: 1rem;
+        color: rgb(148, 203, 235);
+        text-align: center;
+    }
+    
+
+
+.picker-input{
+    pointer-events: none;
+    padding:0px;
+    text-align: right;
+}
+
 mat-datepicker-toggle{
     padding: 0;
     min-width: 0;

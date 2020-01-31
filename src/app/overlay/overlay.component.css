@@ -71,7 +71,7 @@
     color: #ffffff;
     height: 100%;
     width: 200px;
-    position: fixed;
+    position:fixed;
     text-align: center;
     transition: opacity 0.2s ease-in-out;
     z-index: 1;
@@ -85,7 +85,7 @@
 .menu-overlay.open {
     opacity: 1;
     visibility: visible;
-    width:50%;
+    width:200px;
 }
 
 .prompt {
