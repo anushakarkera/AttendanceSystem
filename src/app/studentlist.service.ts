@@ -16,6 +16,8 @@ export class StudentlistService {
   { usn:"09",name:"Yajna", isPresent : true},
   {usn:"10",name:"kushal", isPresent : true}];
   constructor( private httpclient : HttpClient) { }
+  
+  
   getDetails() : Promise<any>{
     return this.httpclient.get("https://newsapi.org/v2/everything?q=bitcoin&from=2019-12-29&sortBy=publishedAt&apiKey=0aa6d01ed30547f3bfdec2b54035b2b7 ")
     .toPromise();
