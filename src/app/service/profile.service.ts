@@ -5,7 +5,6 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProfileService {
-
   constructor(private httpclient : HttpClient) { }
 
   getProfileDetails() : Promise<any>{
