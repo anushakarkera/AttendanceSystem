@@ -1,11 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// import { FindValueOperator } from 'rxjs/internal/operators/find';
 
+// interface myData{
+// success :boolean,
+// message: string
+// }
+
+// interface registerResponse{
+//   success:boolean,
+//   message :string
+// }
 @Injectable({
   providedIn: 'root'
 })
 export class RegisterService {
+  // data: any;
 
 
 
@@ -15,6 +24,11 @@ export class RegisterService {
      getRegisterdetails(register){
        
        return this.httpclient.post('http://juegostudio.in:3021/user/signup',register)
-      //  return FindValueOperator;
+     }
+      
+       
+
+       
+      
    }
-}
+
