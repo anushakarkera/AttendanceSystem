@@ -60,7 +60,6 @@ import { from } from 'rxjs';
     MatIconModule,
     MatListModule,
     HttpClientModule
-
   ],
   entryComponents: [
     UploadProfileComponent,

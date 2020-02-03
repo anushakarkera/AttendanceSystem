@@ -152,7 +152,7 @@ h1 {
   } */
   .container{
     height: 20%;
-    overflow-y: scroll;
+   overflow-y: scroll; 
     /* background-color: rgb(229, 249, 250); */
     background-color: #F3F8Fc;
   }
