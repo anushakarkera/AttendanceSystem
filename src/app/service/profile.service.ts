@@ -9,7 +9,7 @@ export class ProfileService {
   constructor(private httpclient : HttpClient) { }
 
   getProfileDetails() : Promise<any>{
-    return this.httpclient.get("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=25308d26b9c2454390608215e000dc8b")
+    return this.httpclient.post("http://juegostudio.in:3021/user/login","testing")
     .toPromise();
   }
 }
