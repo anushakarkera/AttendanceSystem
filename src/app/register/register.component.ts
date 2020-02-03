@@ -19,8 +19,13 @@ export class RegisterComponent implements OnInit {
   image_Url:string="/assets/signup/img.png"; 
   
 
+
   registerForm: FormGroup;
   submitted = false;
+ 
+ status="SUCCESS";
+  message="FAILED";
+ 
   
   
   constructor(private router: Router,public dialog: MatDialog,private formBuilder:FormBuilder,private registerService : RegisterService) { }
@@ -31,34 +36,42 @@ export class RegisterComponent implements OnInit {
       name: ['',Validators.required],
       email: ['',[Validators.required,Validators.email]],
       password:['',Validators.compose([Validators.required,Validators.minLength(6)])],
-      phone_number: ['',Validators.compose([Validators.required,Validators.min(10),Validators.max(12)])],
+      phone_number: ['',Validators.compose([Validators.required,Validators.minLength(10),Validators.maxLength(12),Validators.pattern('[0-9]+')])],
       gender : ['',Validators.required],
       city : ['',Validators.required]
 
     });
-   
   }
+  
   get fval() {
     return this.registerForm.controls;
     }
   
-   OnSubmit(event){
+   OnSubmit(){
     
-    this.submitted = true;
+     this.submitted = true;
      console.log(this.registerForm.value)
-
-    //  if(this.registerForm.invalid){
+     
     //   console.log("INVALID")
     //   return;
     // }
-    this.registerService.getRegisterdetails(this.registerForm.value)
-    .subscribe(data => console.log(data));
-    alert("SUCCESS");
-     this.router.navigate(['/login']);
-   }
-
   
-
+    this.registerService.getRegisterdetails(this.registerForm.value)
+    .subscribe((data:any) => 
+      {
+        
+        if(data.status){
+        console.log(data)
+         alert("SUCCESS")
+         this.router.navigate(['login'])
+        }else{
+          // console.log(data)
+          alert("FAILED")
+          window.alert(data.message)
+        }
+   });
+  
+   }
   editDialog(): void {
     const dialogRef = this.dialog.open(UploadProfileComponent, {
       panelClass: 'custom-modelBox',
