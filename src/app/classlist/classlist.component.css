@@ -76,6 +76,7 @@
     position: relative;
     font-size: 18px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#A6A6A6;
   }
   .sem{
 
@@ -89,27 +90,31 @@
     margin-bottom:10px;
 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+   color:#A6A6A6; 
   }
   .card {
    
     border-radius: 6px;
     box-shadow: 3px 6px 6px 0 rgba(88, 163, 233, 0.2);
     width: -webkit-fill-available;
-  
 background-color: #ffff;
     text-align: center;
     display: flex;
     margin-left:2rem;
     margin-right: 2rem;
     padding: 4%;
-    margin-top:2rem;
+    margin-top:1rem;
    margin-bottom:2rem;
-    
-    
-    
   }
-  
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid 	#E3EDF6;
+    margin: 1em 0;
+    padding: 0;
+   
+}
   
   
   .card button {
@@ -130,8 +135,6 @@ border-radius: 5px;
 /* margin-left: 30px; */
 font-style: bold;
 align-self: center;
-
-   
     width: -webkit-fill-available;
     position: relative;
 }
@@ -151,8 +154,7 @@ align-self: center;
   h1{
     font-size: 20px;
     margin-top: 10%;
-
-
+    color:rgb(32, 32, 32);
   }
   body{
     background-color: #68aeffef;

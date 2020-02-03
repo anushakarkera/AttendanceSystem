@@ -1,64 +1,88 @@
 <div class="container">
-    <br>
-    <!-- <div *ngIf="error" class="alert alert-danger">{{error}}</div> -->
-    <!-- <form [formGroup]="registerform" (ngSubmit)="onSubmit()"> -->
-    
-    <div>
+    <br>    
+
+    <div >
         <img [src]="image_Url" class="profile">
-       
         </div>
     
-        <div class="edit">
+
+        <div>
             <button  class="picture" mat-raised-button (click)="editDialog()">UPLOAD PICTURE</button>
         </div>
           <br>
-            <div >
-                <input type="text" class="name" name="name" [(ngModel)]="name" required placeholder=" Enter your name"  >
-            <!-- <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
-                <div *ngIf="f.name.errrs.required">name is required</div>
-            </div> -->
+
+
+          <form [formGroup]="registerForm" (ngSubmit)="OnSubmit($event)">
+
+
+            <div  class="form-group">
+                <input type="text" formControlName="name" class="form-control" id="name" class="name" name="name"  placeholder=" Enter your name" [ngClass]="{'is-invalid': submitted && fval.name.errors}" maxlength="20">
+                <div *ngIf="submitted && fval.name.errors" class="invalid-feedback">
+                    <div *ngIf="fval.name.errors.required">Name is required</div>
+                </div>
             </div>
             <br>
+
        
-           <div >
-            <input type="email" class="email"  name="email" [(ngModel)]="email"  required placeholder="Enter email address" >
-           </div>
+           <div class="form-group">
+            <input type="email" formControlName="email" class="form-control" id="email" class="email" name="email"  placeholder="Enter email address" [ngClass]="{'is-invalid': submitted && fval.email.errors}">
+            <div *ngIf="submitted && fval.email.errors" class="invalid-feedback">
+                <div *ngIf="fval.email.errors.required">Email is required</div>
+                <div *ngIf="fval.email.errors.email">Enter the valid email address</div>
+            </div>
+        </div>
            <br>
-           <!-- <br> -->
+           
 
-           <div>
-         <input type="password" class="pass" name="password" [(ngModel)]="password"  required placeholder="Password " >
-           </div>
+
+           <div class="form-group">
+         <input type="password" formControlName="password" class="form-control" id="password" class="pass" name="password"  placeholder="Password " [ngClass]="{'is-invalid': submitted && fval.password.errors}">
+         <div *ngIf="submitted && fval.password.errors" class="invalid-feedback">
+            <div *ngIf="fval.password.errors.required">Password is required</div>
+       
+        <div *ngIf="fval.password.errors.minlength">Password must be atleast 6 characters</div>
+    </div>
+</div>
            <br>
 
-           <div >
-            <input type="number" class="number" name="phone_number" [(ngModel)]="phone_number"  required placeholder="Phone Number " >
-           </div>
+
+           <div class="form-group">
+            <input type="number" pattern="[0-9]{10,10}"  formControlName="phone_number" id="phone_number" class="number" name="phone_number"  placeholder="Phone Number" [ngClass]="{'is-invalid': submitted && fval.phone_number.invalid}" required max="12" min="10">
+            <!-- <div *ngIf="submitted && fval.phone_number.errors" class="invalid-feedback">
+                <div *ngIf="fval.phone_number.errors.required">phone_number is required</div>
+                <div *ngIf="fval.phone_number.errors.minlength"></div>
+            </div>  -->
+        </div>
            <br>
 
-           <div class="Gender">
-            <select class="gender">
-    
+        
+           <div class="Gender form-group">
+            <select class="gender" formControlName="gender" required>
+                <option value="" disabled>Select Gender</option>
+                <option value="" disabled>MALE</option>
                 <option class="color" value="Male">MALE</option>
                 <option class="color" value="Female">FEMALE</option>
-           
             </select>
            </div>
            <br>
 
-           <div class="City">
-            <select class="city" required>
+
+
+           <div class="City form-group">
+            <select class="city"  formControlName="city" required>
                 <option value="" disabled>Current City</option>
                 <option class="color" value="mangalore">mangalore</option>
                 <option class="color" value="bangalore">bangalore</option>
                 <option class="color" value="mysore">mysore</option>
                 <option class="color" value="udupi">udupi</option>
-           
             </select>
            </div>
-<!-- <br> -->
-           <div  >
-            <button class="column" type="submit">SIGNUP</button>
+
+
+           <div>
+            <button class="column" type="submit" >SIGNUP</button>
            </div>
-           <!-- </form> -->
+          </form>
+
+       
 </div>

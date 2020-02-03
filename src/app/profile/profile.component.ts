@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { UploadProfileComponent } from '../upload-profile/upload-profile.component';
+import { ProfileService } from '../service/profile.service';
 
 
 
@@ -25,11 +26,16 @@ export class ProfileComponent implements OnInit {
     console.log(name)
     console.log(email)
     console.log(phno)
+
+    this._profileService.getProfileDetails()
+    .then(data =>   console.log(data));
   }
   
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private _profileService : ProfileService) { }
 
   ngOnInit(): void{
+    this._profileService.getProfileDetails()
+    .then(data =>   console.log(data));
   }
 
   openDialog(): void {
@@ -50,6 +56,12 @@ export class ProfileComponent implements OnInit {
          reader.readAsDataURL(results);
     });
   
+  }
+
+  onSave(): void {
+    this._profileService.getProfileDetails()
+    .then(data =>   console.log(data));
+    console.log("fgbxfd");
   }
 
   

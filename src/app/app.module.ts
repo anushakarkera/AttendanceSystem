@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
+import { ReactiveFormsModule} from '@angular/forms';
+
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { ProfileComponent } from './profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -24,6 +25,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import {HttpClientModule} from  '@angular/common/http';
+import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,16 +41,18 @@ import { MatListModule } from '@angular/material/list';
     DateselectorComponent,
     ConfirmDialogComponent,
     ForgotPasswordComponent,
-    MainNavComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     MatDialogModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    // HttpClientModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
