@@ -21,7 +21,7 @@ export class ListComponent implements OnInit {
     this.student_list=this.myservice.getStudentList();
 
     this.myservice.getDetails()
-    .then(data => console.log(data));
+    .subscribe(data => console.log(data));
   }
   // onClick()
   // {
