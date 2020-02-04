@@ -17,7 +17,7 @@ export class StudentlistService {
   {usn:"10",name:"kushal", isPresent : true}];
   constructor( private httpclient : HttpClient) { }
   getDetails() {
-    return this.httpclient.post("http://dummy.restapiexample.com/api/v1/create",{});
+    return this.httpclient.post("http://dummy.restapiexample.com/api/v1/create",{ });
   }
 
 
