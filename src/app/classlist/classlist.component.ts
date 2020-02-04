@@ -11,33 +11,38 @@ export class ClasslistComponent implements OnInit {
   classes =[
     { 
       time:"10:00 AM",
-      branch:"cse",
-      year:"first",
-      sem:"1"
+     roomNumber:"201",
+      className:"LH101",
+   classSubjectID:"534NCD",
+subjectName:"english"
     },
     {
-      time:"09:00 AM",
-      branch:"ise",
-      year:"first",
-      sem:"1"
+      time:"10:00 AM",
+     roomNumber:"201",
+      className:"LH101",
+   classSubjectID:"534NCD",
+subjectName:"english"
     },
     {
-      time:"12:00 PM",
-      branch:"mech",
-  year:"first",
-  sem:"1"
+      time:"10:00 AM",
+     roomNumber:"201",
+      className:"LH101",
+   classSubjectID:"534NCD",
+subjectName:"english"
   },
   {
-    time:"11:00 AM",
-    branch:"civil",
-    year:"second",
-    sem:"3"
+    time:"10:00 AM",
+    roomNumber:"201",
+     className:"LH101",
+  classSubjectID:"534NCD",
+subjectName:"english"
   },
   {
-    time:"3:00 PM",
-    branch:"civil",
-    year:"third",
-    sem:"5"
+    time:"10:00 AM",
+     roomNumber:"201",
+      className:"LH101",
+   classSubjectID:"534NCD",
+subjectName:"english"
   }
   ]
   
