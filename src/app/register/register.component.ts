@@ -6,7 +6,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { RegisterService } from '../service1/register.service';
 
 
-// declare var NgForm:any;
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -17,7 +16,7 @@ import { RegisterService } from '../service1/register.service';
 export class RegisterComponent implements OnInit {
   
   image_Url:string="/assets/signup/img.png"; 
-  
+  mobNumberPattern = "^((\\+91-?)|0)?[0-9]{10}$";
 
 
   registerForm: FormGroup;
@@ -51,10 +50,6 @@ export class RegisterComponent implements OnInit {
     
      this.submitted = true;
      console.log(this.registerForm.value)
-     
-    //   console.log("INVALID")
-    //   return;
-    // }
   
     this.registerService.getRegisterdetails(this.registerForm.value)
     .subscribe((data:any) => 
@@ -64,8 +59,8 @@ export class RegisterComponent implements OnInit {
         console.log(data)
          alert("SUCCESS")
          this.router.navigate(['login'])
-        }else{
-          // console.log(data)
+        }
+        else{
           alert("FAILED")
           window.alert(data.message)
         }
