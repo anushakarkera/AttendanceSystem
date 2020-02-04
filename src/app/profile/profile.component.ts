@@ -35,7 +35,7 @@ export class ProfileComponent implements OnInit {
     // .then(data =>   console.log(data));
 
     this.submitted = true;
-    console.log(this.profileForm.value);
+    // console.log(this.profileForm.value);
 
     this._profileService.getProfileDetails()
     .subscribe(data =>   console.log(data));
@@ -46,9 +46,9 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void{
     this.profileForm = this.formBuilder.group({
-      name: ['',Validators.required],
+      fullname: ['',Validators.required],
       email: ['',[Validators.required,Validators.email]],
-      phone_number: ['',Validators.compose([Validators.required,Validators.minLength(10),Validators.maxLength(12),Validators.pattern('[0-9]+')])],
+      phone: ['',Validators.compose([Validators.required,Validators.minLength(10),Validators.maxLength(12),Validators.pattern('[0-9]+')])],
       gender : ['',Validators.required],
       city : ['',Validators.required]
 
