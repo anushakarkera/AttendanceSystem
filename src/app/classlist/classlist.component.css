@@ -8,18 +8,6 @@
     padding: 0;
     
   }
-
-.cards-container .mat-drawer-content {
-  position: relative;
-  z-index: 1;
-  display: block;
-  height: 100%;
-  
-}
-
-
-
-
   /* .calender{ */
       /* top:4em; */
       /* position: absolute; */
@@ -27,6 +15,7 @@
       /* height: 20%; */
       /* color: #68a6ee; */
       /* width:50px; */
+      
       /* margin:0; */
     /* padding: 0; */
     /* text-align: center; */
@@ -163,7 +152,7 @@ align-self: center;
     opacity: 0.9;
   }
   
-  h2{
+  h1{
     font-size: 20px;
     margin-top: 10%;
     color:rgb(32, 32, 32);
@@ -172,7 +161,6 @@ align-self: center;
     background-color: #68aeffef;
     height: 100%;
     width:100%;
-    /* overflow-y: hidden; */
   }
   
   .entire
@@ -185,5 +173,5 @@ align-self: center;
 
 .cards-container{
   flex: 1;
-  overflow: auto;
+  overflow-y: auto;
 }
