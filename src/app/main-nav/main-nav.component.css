@@ -1,11 +1,15 @@
 .sidenav-container {
   height: 100%;
+  overflow: hidden;
 }
 
 .sidenav {
   width: 200px; 
   /* width:100%; */
+  overflow: hidden;
 }
+
+
 
 .sidenav .mat-toolbar {
   background: inherit;
@@ -79,4 +83,12 @@
 .mat-toolbar.mat-primary {
   background:#f3f8fc;
   
+}
+
+.mat-drawer-content {
+  position: relative;
+  z-index: 1;
+  display: block;
+  height: 100%;
+  overflow: hidden;
 }

@@ -1,3 +1,6 @@
+
+
+
 <app-main-nav><div class="entire">
   <!-- <div>
   <app-main-nav>
@@ -36,9 +39,10 @@
 <div class="cards-container">
 <div class="card" *ngFor="let class of classes">
   <div class="details">
-    <h1>{{class.time}} {{class.year}}</h1>
-    <p class="branch">Branch:{{class.branch}}</p>
-    <p class="sem">Sem:{{class.sem}}</p>
+    <h2>{{class.time}} </h2>
+    <p class="sem">Subject:  {{class.subjectName}}</p>
+    <p class="sem">SubID:  {{class.classSubjectID}}</p>
+    <p class="sem">Room no:  {{class.roomNumber}},  {{class.className}}</p>
   </div>
   <div class="buttons">
     <button (click)='onClick()'>ATTENDANCE</button>
