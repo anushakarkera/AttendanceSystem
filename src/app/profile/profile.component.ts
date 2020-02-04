@@ -36,6 +36,10 @@ export class ProfileComponent implements OnInit {
 
     this.submitted = true;
     console.log(this.profileForm.value);
+
+    this._profileService.getProfileDetails()
+    .subscribe(data =>   console.log(data));
+    console.log("fgbxfd");
   }
   
   constructor(public dialog: MatDialog, private _profileService : ProfileService, private formBuilder : FormBuilder) { }
@@ -75,9 +79,7 @@ export class ProfileComponent implements OnInit {
   }
 
   onSave(): void {
-    this._profileService.getProfileDetails()
-    .then(data =>   console.log(data));
-    console.log("fgbxfd");
+    
   }
 
   
