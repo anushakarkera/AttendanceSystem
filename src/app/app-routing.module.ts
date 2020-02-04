@@ -21,7 +21,8 @@ const routes: Routes = [
   {path: 'classlist',component:ClasslistComponent},
   { path:'login', component: LoginComponent},
   { path: 'overlay', component: OverlayComponent},
-  { path: 'forgotpassword', component: ForgotPasswordComponent}
+  { path: 'forgotpassword', component: ForgotPasswordComponent},
+  { path: '', component:LoginComponent}
 ];
 
 
