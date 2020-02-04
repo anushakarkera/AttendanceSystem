@@ -13,6 +13,12 @@
     z-index: 2;
 }
 
+
+
+
+
+
+
 .hamburger-icon {
     position: absolute;
     width: 20px;
@@ -137,7 +143,7 @@ a {
     position: relative;
     color: #d3d3d3;
     text-decoration: none;
-    overflow: hidden;
+     overflow: hidden; 
 }
 
 a.nav-links:hover {
