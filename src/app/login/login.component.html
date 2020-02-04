@@ -4,8 +4,8 @@
     <div class="head">
         <h1>Login Form</h1>
     </div>
-    <div *ngIf="!this.success">
-        <p>wrong email/password</p>
+    <div *ngIf="!this.success" class="invalid-cred">
+        <p> WRONG PASSWORD OR EMAIL </p>
     </div>
 
     <div class="grid">
@@ -23,7 +23,7 @@
 
             <div class="buttons">
                 <div class="form__field" id="container2">
-                    <input (click)='onClick()' type="submit"  value="Login" id="login">
+                    <input (click)='onClick()' type="submit" value="Login" id="login">
                 </div>
                 <div class="form__field" id="container1">
                     <input (click)="onSignup()" type="submit" value="Sign up" id="signup">
