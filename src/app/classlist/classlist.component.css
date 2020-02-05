@@ -173,10 +173,6 @@ align-self: center;
 
 .cards-container{
   flex: 1;
-<<<<<<< HEAD
-  overflow-y: auto;
-=======
   overflow: auto;
   margin-bottom: 4rem;
->>>>>>> 01bb076c9dda218ce39fee7c8d5d41941f45921f
 }
