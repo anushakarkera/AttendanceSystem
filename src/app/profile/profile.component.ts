@@ -1,3 +1,4 @@
+import { IProfile } from './../service/profile.service';
 import { LoginService } from './../service1/login.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
@@ -21,6 +22,16 @@ export class ProfileComponent implements OnInit {
   DialogService: any;
 
   accessToken : String = this._loginService.getAccessToken();
+<<<<<<< HEAD
+=======
+
+  public FullName : string;
+  public Email : string;
+  public Phone : string;
+  public Gender : string;
+  public City : string; 
+
+>>>>>>> c1b9489f5556d2ee1edf64a8f794a04d3fff3538
   profileForm: FormGroup;
   submitted = false;
   
@@ -43,10 +54,9 @@ export class ProfileComponent implements OnInit {
 
     this.submitted = true;
     // console.log(this.profileForm.value);
+    
 
-    this._profileService.getProfileDetails(this.accessToken)
-    .subscribe(data =>   console.log(data));
-    console.log("fgbxfd");
+   // console.log(this.FullName)
   }
   
   constructor(
@@ -67,11 +77,26 @@ export class ProfileComponent implements OnInit {
       city : ['',Validators.required]
     });
 
+<<<<<<< HEAD
     
 
     }
     
 
+=======
+
+    
+    this._profileService.getProfileDetails(this.accessToken)
+    .subscribe((data : any) =>  {
+      this.FullName = data.data.fullName;
+      this.Email = data.data.email;
+      this.Phone = data.data.phone;
+      this.Gender = data.data.gender;
+      this.City = data.data.city;
+      console.log(this.FullName,this.Email,this.Phone);
+    });
+  }
+>>>>>>> c1b9489f5556d2ee1edf64a8f794a04d3fff3538
   get fval(){
     return this.profileForm.controls;
   }

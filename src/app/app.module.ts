@@ -2,7 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule} from '@angular/forms';
-
+import { StorageServiceModule } from 'ngx-webstorage-service';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { ProfileComponent } from './profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -62,6 +62,8 @@ import { HttpModule } from '@angular/http';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    HttpClientModule,
+    StorageServiceModule,
     HttpModule
   ],
   entryComponents: [

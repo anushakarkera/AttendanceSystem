@@ -1,3 +1,5 @@
+import { map } from 'rxjs/operators';
+import { observable, Observable } from 'rxjs';
 
 // import { RequestOptions } from '@angular';
 import { Injectable } from '@angular/core';
@@ -6,7 +8,19 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Http, Headers, RequestOptions } from "@angular/http";
 import { tokenName } from '@angular/compiler';
+<<<<<<< HEAD
 import {Observable} from "rxjs/index";
+=======
+
+export interface IProfile {
+  fullname: string;
+  email: string;
+  phone: string;
+  gender: string;
+  city : string;
+}
+
+>>>>>>> c1b9489f5556d2ee1edf64a8f794a04d3fff3538
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +29,7 @@ export class ProfileService {
  
   public profile_info: any;
   auth: any;
-  constructor(private http: Http) { 
+  constructor(private http: Http,private httpclient : HttpClient) { 
     this.profile_info = {
       "fullname" : "",
       "email" : "",
@@ -25,14 +39,23 @@ export class ProfileService {
     };
    }
  
-  getProfileDetails(accessToken) {
-    // let headers: HttpHeaders = new HttpHeaders();
+  getProfileDetails(accessToken){
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Authorization':accessToken
+      })
+    };
+   
     // headers.append('Content-Type', 'application/JSON');
     // headers.append('Authorization', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTM5MTA5MzYwOGU1ZjNhMTJjYzcwNzAiLCJpYXQiOjE1ODA3OTgxNTcsImV4cCI6MTU4MDg4NDU1N30.ACi3WXoyHgkK5ugXSUbcPNphqb1obnUqm5FjDBhOHV0' );
     // let headers = new Headers({ "content-type": "application/json" });
-    let headers = new Headers({ "Authorization": accessToken });
-    let options = new RequestOptions({ headers: headers });
-    return this.http.post("	http://juegostudio.in:3021/user/profile",JSON.stringify(this.profile_info),options);
+   // let headers = new Headers({ "Authorization": accessToken });
+   const headers = new HttpHeaders({'Authorization':accessToken});
+   // let options = new RequestOptions({ headers: headers });
+    return this.httpclient.post("	http://juegostudio.in:3021/user/profile",null,httpOptions)
+
   }
 
 }
