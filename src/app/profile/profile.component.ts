@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-// import { IProfile } from './../service/profile.service';
-=======
 import { logging } from 'protractor';
-import { IProfile } from './../service/profile.service';
->>>>>>> 030b4c3482d1e7a4509495bb4df372b6462e6e8a
+
 import { LoginService } from './../service1/login.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
