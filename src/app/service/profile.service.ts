@@ -6,12 +6,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Http, Headers, RequestOptions } from "@angular/http";
 import { tokenName } from '@angular/compiler';
-
+import {Observable} from "rxjs/index";
 @Injectable({
   providedIn: 'root'
 })
 export class ProfileService {
 
+ 
   public profile_info: any;
   auth: any;
   constructor(private http: Http) { 
@@ -33,4 +34,5 @@ export class ProfileService {
     let options = new RequestOptions({ headers: headers });
     return this.http.post("	http://juegostudio.in:3021/user/profile",JSON.stringify(this.profile_info),options);
   }
+
 }

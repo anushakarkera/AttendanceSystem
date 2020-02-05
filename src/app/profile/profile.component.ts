@@ -4,7 +4,7 @@ import { MatDialog } from '@angular/material';
 import { FormBuilder, FormGroup,Validators, FormControl } from '@angular/forms';
 import { UploadProfileComponent } from '../upload-profile/upload-profile.component';
 import { ProfileService } from '../service/profile.service';
-
+import { Router } from '@angular/router';
 
 
 
@@ -13,18 +13,21 @@ import { ProfileService } from '../service/profile.service';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
+
+
 export class ProfileComponent implements OnInit {
   
   imageUrl : string = "/assets/profile-image/profileImage.jpg"; 
   DialogService: any;
 
   accessToken : String = this._loginService.getAccessToken();
-
-
   profileForm: FormGroup;
   submitted = false;
+  
 
-  userDetails(event){
+
+      
+  userDetails(){
     // event.preventDefault()
     // const target = event.target
     // const name = target.querySelector('#userName').value
@@ -47,24 +50,32 @@ export class ProfileComponent implements OnInit {
   }
   
   constructor(
+   
     public dialog: MatDialog, 
     private _profileService : ProfileService,
     private formBuilder : FormBuilder, 
     private _loginService : LoginService) { }
 
+
   ngOnInit(): void{
+  
     this.profileForm = this.formBuilder.group({
       fullname: ['',Validators.required],
       email: ['',[Validators.required,Validators.email]],
       phone: ['',Validators.compose([Validators.required,Validators.minLength(10),Validators.maxLength(12),Validators.pattern('[0-9]+')])],
       gender : ['',Validators.required],
       city : ['',Validators.required]
-
     });
-  }
+
+    
+
+    }
+    
+
   get fval(){
     return this.profileForm.controls;
   }
+
 
   openDialog(): void {
     const dialogRef = this.dialog.open(UploadProfileComponent, {
