@@ -8,9 +8,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Http, Headers, RequestOptions } from "@angular/http";
 import { tokenName } from '@angular/compiler';
-<<<<<<< HEAD
-import {Observable} from "rxjs/index";
-=======
 
 export interface IProfile {
   fullname: string;
@@ -20,7 +17,6 @@ export interface IProfile {
   city : string;
 }
 
->>>>>>> c1b9489f5556d2ee1edf64a8f794a04d3fff3538
 @Injectable({
   providedIn: 'root'
 })

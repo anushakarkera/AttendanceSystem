@@ -22,16 +22,6 @@ export class ProfileComponent implements OnInit {
   DialogService: any;
 
   accessToken : String = this._loginService.getAccessToken();
-<<<<<<< HEAD
-=======
-
-  public FullName : string;
-  public Email : string;
-  public Phone : string;
-  public Gender : string;
-  public City : string; 
-
->>>>>>> c1b9489f5556d2ee1edf64a8f794a04d3fff3538
   profileForm: FormGroup;
   submitted = false;
   
@@ -70,33 +60,18 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void{
   
     this.profileForm = this.formBuilder.group({
-      fullname: ['',Validators.required],
+      fullName: ['',Validators.required],
       email: ['',[Validators.required,Validators.email]],
       phone: ['',Validators.compose([Validators.required,Validators.minLength(10),Validators.maxLength(12),Validators.pattern('[0-9]+')])],
       gender : ['',Validators.required],
       city : ['',Validators.required]
     });
 
-<<<<<<< HEAD
     
 
     }
     
 
-=======
-
-    
-    this._profileService.getProfileDetails(this.accessToken)
-    .subscribe((data : any) =>  {
-      this.FullName = data.data.fullName;
-      this.Email = data.data.email;
-      this.Phone = data.data.phone;
-      this.Gender = data.data.gender;
-      this.City = data.data.city;
-      console.log(this.FullName,this.Email,this.Phone);
-    });
-  }
->>>>>>> c1b9489f5556d2ee1edf64a8f794a04d3fff3538
   get fval(){
     return this.profileForm.controls;
   }
