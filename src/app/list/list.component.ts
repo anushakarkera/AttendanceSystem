@@ -24,7 +24,7 @@ export class ListComponent implements OnInit {
     .subscribe(data => console.log(data));
   }
   // onClick()
-  // {
+  // {\
   //   console.log(this.student_list)
   // }
    setColor(index) {
