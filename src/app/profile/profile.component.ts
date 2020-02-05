@@ -1,4 +1,5 @@
-// import { IProfile } from './../service/profile.service';
+
+
 import { LoginService } from './../service1/login.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
@@ -52,7 +53,8 @@ export class ProfileComponent implements OnInit {
     // .then(data =>   console.log(data));
 
     this.submitted = true;
-    console.log(this.profileForm.value);
+    // console.log(this.profileForm.value);
+    console.log(this.profileForm.value)
     
 
    // console.log(this.FullName)
@@ -74,20 +76,9 @@ export class ProfileComponent implements OnInit {
       phone: ['',Validators.compose([Validators.required,Validators.minLength(10),Validators.maxLength(12),Validators.pattern('[0-9]+')])],
       gender : ['',Validators.required],
       city : ['',Validators.required]
+ 
     });
-
     console.log(this.profileForm.value)
-
-   this._profileService.getProfileDetails(this.accessToken)
-   .subscribe((data:any)=>
-   {
-     this.FullName=data.data.fullName;
-     this.Email=data.data.email;
-     this.Phone=data.data.phone;
-     this.Gender=data.data.gender;
-   this.City=data.data.city;
-   console.log(this.FullName,this.Email,this.Phone);
-   });
 
     }
     
@@ -118,7 +109,6 @@ export class ProfileComponent implements OnInit {
   }
 
   onSave(): void {
-    
   }
 
   
