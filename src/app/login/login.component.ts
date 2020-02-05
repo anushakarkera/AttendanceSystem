@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   url = "http://juegostudio.in:3021/user/login";
   success= true;
   
-  onClick(){
+  onClickSubmit(){
     this.success = this._loginService.verifyLogin(this.email,this.password);
     if(this.success){
       this.router.navigate(['/classlist']);
