@@ -1,4 +1,4 @@
-import { logging } from 'protractor';
+
 
 import { LoginService } from './../service1/login.service';
 import { Component, OnInit } from '@angular/core';
