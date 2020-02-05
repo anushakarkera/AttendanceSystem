@@ -1,5 +1,7 @@
+import { LoginService } from './../service1/login.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
+import { FormBuilder, FormGroup,Validators, FormControl } from '@angular/forms';
 import { UploadProfileComponent } from '../upload-profile/upload-profile.component';
 import { ProfileService } from '../service/profile.service';
 
@@ -16,26 +18,52 @@ export class ProfileComponent implements OnInit {
   imageUrl : string = "/assets/profile-image/profileImage.jpg"; 
   DialogService: any;
 
+  accessToken : String = this._loginService.getAccessToken();
+
+
+  profileForm: FormGroup;
+  submitted = false;
+
   userDetails(event){
-    event.preventDefault()
-    const target = event.target
-    const name = target.querySelector('#userName').value
-    const email = target.querySelector('#Email_id').value
-    const phno = target.querySelector('#phone_no').value
+    // event.preventDefault()
+    // const target = event.target
+    // const name = target.querySelector('#userName').value
+    // const email = target.querySelector('#Email_id').value
+    // const phno = target.querySelector('#phone_no').value
 
-    console.log(name)
-    console.log(email)
-    console.log(phno)
+    // console.log(name)
+    // console.log(email)
+    // console.log(phno)
 
-    this._profileService.getProfileDetails()
-    .then(data =>   console.log(data));
+    // this._profileService.getProfileDetails()
+    // .then(data =>   console.log(data));
+
+    this.submitted = true;
+    // console.log(this.profileForm.value);
+
+    this._profileService.getProfileDetails(this.accessToken)
+    .subscribe(data =>   console.log(data));
+    console.log("fgbxfd");
   }
   
-  constructor(public dialog: MatDialog, private _profileService : ProfileService) { }
+  constructor(
+    public dialog: MatDialog, 
+    private _profileService : ProfileService,
+    private formBuilder : FormBuilder, 
+    private _loginService : LoginService) { }
 
   ngOnInit(): void{
-    this._profileService.getProfileDetails()
-    .then(data =>   console.log(data));
+    this.profileForm = this.formBuilder.group({
+      fullname: ['',Validators.required],
+      email: ['',[Validators.required,Validators.email]],
+      phone: ['',Validators.compose([Validators.required,Validators.minLength(10),Validators.maxLength(12),Validators.pattern('[0-9]+')])],
+      gender : ['',Validators.required],
+      city : ['',Validators.required]
+
+    });
+  }
+  get fval(){
+    return this.profileForm.controls;
   }
 
   openDialog(): void {
@@ -59,9 +87,7 @@ export class ProfileComponent implements OnInit {
   }
 
   onSave(): void {
-    this._profileService.getProfileDetails()
-    .then(data =>   console.log(data));
-    console.log("fgbxfd");
+    
   }
 
   

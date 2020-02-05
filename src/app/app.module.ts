@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule} from '@angular/forms';
@@ -26,7 +27,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {HttpClientModule} from  '@angular/common/http';
+
 import { from } from 'rxjs';
+import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +55,7 @@ import { from } from 'rxjs';
     MatDialogModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    // HttpClientModule,
+    HttpClientModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
@@ -60,7 +63,8 @@ import { from } from 'rxjs';
     MatIconModule,
     MatListModule,
     HttpClientModule,
-    StorageServiceModule
+    StorageServiceModule,
+    HttpModule
   ],
   entryComponents: [
     UploadProfileComponent,
