@@ -1,3 +1,4 @@
+import { IProfile } from './../service/profile.service';
 import { LoginService } from './../service1/login.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
@@ -20,6 +21,11 @@ export class ProfileComponent implements OnInit {
 
   accessToken : String = this._loginService.getAccessToken();
 
+  public FullName : string;
+  public email : string;
+  public phone : string;
+  public gender : string;
+  public city : string; 
 
   profileForm: FormGroup;
   submitted = false;
@@ -40,10 +46,9 @@ export class ProfileComponent implements OnInit {
 
     this.submitted = true;
     // console.log(this.profileForm.value);
+    
 
-    this._profileService.getProfileDetails(this.accessToken)
-    .subscribe(data =>   console.log(data));
-    console.log("fgbxfd");
+   // console.log(this.FullName)
   }
   
   constructor(
@@ -60,6 +65,14 @@ export class ProfileComponent implements OnInit {
       gender : ['',Validators.required],
       city : ['',Validators.required]
 
+    });
+
+
+    
+    this._profileService.getProfileDetails(this.accessToken)
+    .subscribe((data : any) =>  {
+     // this.FullName = data.data.fullName;
+      console.log(data);
     });
   }
   get fval(){
