@@ -1,11 +1,11 @@
-import { IProfile } from './../service/profile.service';
+// import { IProfile } from './../service/profile.service';
 import { LoginService } from './../service1/login.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { FormBuilder, FormGroup,Validators, FormControl } from '@angular/forms';
 import { UploadProfileComponent } from '../upload-profile/upload-profile.component';
 import { ProfileService } from '../service/profile.service';
-import { Router } from '@angular/router';
+// import { Router } from '@angular/router';
 
 
 
@@ -21,7 +21,16 @@ export class ProfileComponent implements OnInit {
   imageUrl : string = "/assets/profile-image/profileImage.jpg"; 
   DialogService: any;
 
+ 
+
+
   accessToken : String = this._loginService.getAccessToken();
+  public FullName:string;
+  public Email:string;
+  public Phone:string;
+  public Gender:string;
+  public City:string;
+
   profileForm: FormGroup;
   submitted = false;
   
@@ -43,7 +52,7 @@ export class ProfileComponent implements OnInit {
     // .then(data =>   console.log(data));
 
     this.submitted = true;
-    // console.log(this.profileForm.value);
+    console.log(this.profileForm.value);
     
 
    // console.log(this.FullName)
@@ -67,7 +76,18 @@ export class ProfileComponent implements OnInit {
       city : ['',Validators.required]
     });
 
-    
+    console.log(this.profileForm.value)
+
+   this._profileService.getProfileDetails(this.accessToken)
+   .subscribe((data:any)=>
+   {
+     this.FullName=data.data.fullName;
+     this.Email=data.data.email;
+     this.Phone=data.data.phone;
+     this.Gender=data.data.gender;
+   this.City=data.data.city;
+   console.log(this.FullName,this.Email,this.Phone);
+   });
 
     }
     

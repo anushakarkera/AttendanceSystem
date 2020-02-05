@@ -9,25 +9,25 @@
     </div>
     <form id="form" [formGroup] = "profileForm" (ngSubmit)="userDetails()">
         <div id="Name">
-            <input class="name" type="text" value = {{FullName}} id="userName" formControlName = "name" [ngClass] = "{'is-invalid': submitted && fval.name.errors}">
+            <input class="name" type="text" placeholder="Name" id="userName" formControlName = "name" [ngClass] = "{'is-invalid': submitted && fval.name.errors}">
             <div *ngIf="submitted && fval.name.errors" class="invalid-feedback">
                 <div *ngIf="fval.name.errors.required">Name is required</div>
             </div>
         </div>
         <div id="Email">
-            <input class="email" type="email" formControlName = "email" value = {{Email}} id="Email_id"  [ngClass] = "{'is-invalid': submitted && fval.email.errors}">
+            <input class="email" type="email" formControlName = "email" placeholder="Email ID" id="Email_id"  [ngClass] = "{'is-invalid': submitted && fval.email.errors}">
             <div *ngIf="submitted && fval.email.errors" class="invalid-feedback">
                 <div *ngIf="fval.email.errors.required">Email is required</div>
                 <div *ngIf="fval.email.errors.email">Enter the valid email address</div>
             </div>
         </div>
         <div id="PhoneNo">
-            <input class="phno" type="number" value = {{Phone}} id="phone_no">
+            <input class="phno" type="number" placeholder="Phone Number" id="phone_no">
         </div>
         
         <div id="Gender">
             <select class="gender" formControlName = "gender" required>
-                <option value="" disabled>{{Gender}}</option>
+                <option value="" disabled>SELECT GENDER</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
             </select>
@@ -35,7 +35,7 @@
 
         <div id="City">
             <select class="city" formControlName = "gender" required>
-                <option class="current_city" value="" disabled selected hidden > {{City}}</option>
+                <option class="current_city" value="" disabled selected hidden >Current City</option>
                 <option value="mangalore">Mangalore</option>
                 <option value="bangalore">Bangalore</option>
                 <option value="mysore">Mysore</option>
