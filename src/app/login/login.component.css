@@ -118,7 +118,8 @@ input {
     transition: background-color 0.3s;
 }
 
-input[type='submit'] {
+input[type='submit'],
+input[type='button'] {
     cursor: pointer;
 }
 
@@ -132,7 +133,8 @@ input[type='submit'] {
     width: 150%;
 }
 
-.form input[type='submit'] {
+.form input[type='submit'],
+.form input[type='button'] {
     width: -webkit-fill-available;
 }
 
@@ -168,7 +170,8 @@ input[type='submit'] {
 .login label,
 .login input[type='text'],
 .login input[type='password'],
-.login input[type='submit'] {
+.form input[type='submit'],
+.form input[type='button'] {
     border-radius: 0.25rem;
     padding: 16px;
     padding: 1rem;
@@ -214,7 +217,8 @@ input[type='submit'] {
     color: #363b41;
 }
 
-.login input[type='submit'] {
+.form input[type='submit'],
+.form input[type='button'] {
     background-color: #4AB3EF;
     color: #eee;
     font-weight: 700;
@@ -222,7 +226,9 @@ input[type='submit'] {
 }
 
 .login input[type='submit']:focus,
-.login input[type='submit']:hover {
+.login input[type='submit']:hover,
+.login input[type='button']:focus,
+.login input[type='button']:hover {
     background-color: rgb(2, 105, 165);
 }
 
