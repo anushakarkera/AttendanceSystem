@@ -1,3 +1,4 @@
+import { logging } from 'protractor';
 import { IProfile } from './../service/profile.service';
 import { LoginService } from './../service1/login.service';
 import { Component, OnInit } from '@angular/core';
@@ -46,6 +47,7 @@ export class ProfileComponent implements OnInit {
 
     this.submitted = true;
     // console.log(this.profileForm.value);
+    console.log(this.profileForm.value)
     
 
    // console.log(this.FullName)
@@ -64,9 +66,9 @@ export class ProfileComponent implements OnInit {
       phone: ['',Validators.compose([Validators.required,Validators.minLength(10),Validators.maxLength(12),Validators.pattern('[0-9]+')])],
       gender : ['',Validators.required],
       city : ['',Validators.required]
-
+ 
     });
-
+    console.log(this.profileForm.value)
 
     
     this._profileService.getProfileDetails(this.accessToken)
