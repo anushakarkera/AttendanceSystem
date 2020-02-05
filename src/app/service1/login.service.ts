@@ -25,9 +25,7 @@ export class LoginService {
   verifyLogin(name: string, pass: string) {
    this.httpclient.post("http://juegostudio.in:3021/user/login", {"email":name , "password":pass}).pipe(
       
-      catchError((error: HttpErrorResponse) =>{
-        return this.handleError(error);
-      })
+      catchError((error: HttpErrorResponse) =>this.handleError(error))
       )
     
     .subscribe((data: any) => {if(data.code == 200){

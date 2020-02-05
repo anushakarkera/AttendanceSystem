@@ -27,6 +27,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {HttpClientModule} from  '@angular/common/http';
 import { from } from 'rxjs';
+import { OtpComponent } from './otp/otp.component';
+import { NewpasswordComponent } from './newpassword/newpassword.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,9 @@ import { from } from 'rxjs';
     DateselectorComponent,
     ConfirmDialogComponent,
     ForgotPasswordComponent,
-    MainNavComponent
+    MainNavComponent,
+    OtpComponent,
+    NewpasswordComponent
   ],
   imports: [
     BrowserModule,
