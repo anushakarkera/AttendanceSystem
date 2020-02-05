@@ -1,5 +1,3 @@
-import { logging } from 'protractor';
-import { IProfile } from './../service/profile.service';
 import { LoginService } from './../service1/login.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
@@ -48,7 +46,8 @@ export class ProfileComponent implements OnInit {
     this.submitted = true;
     // console.log(this.profileForm.value);
     console.log(this.profileForm.value)
-    
+    this._profileService.updateProfile(this.profileForm.value, this.accessToken)
+    .subscribe((data : any) => console.log(data))
 
    // console.log(this.FullName)
   }
@@ -61,8 +60,8 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void{
     this.profileForm = this.formBuilder.group({
-      fullname: ['',Validators.required],
-      email: ['',[Validators.required,Validators.email]],
+      // fullName: ['',Validators.required],
+      // email: ['',[Validators.required,Validators.email]],
       phone: ['',Validators.compose([Validators.required,Validators.minLength(10),Validators.maxLength(12),Validators.pattern('[0-9]+')])],
       gender : ['',Validators.required],
       city : ['',Validators.required]
@@ -71,7 +70,7 @@ export class ProfileComponent implements OnInit {
     console.log(this.profileForm.value)
 
     
-    this._profileService.getProfileDetails(this.accessToken)
+    this._profileService.getProfileDetails(this.accessToken )
     .subscribe((data : any) =>  {
       this.FullName = data.data.fullName;
       this.Email = data.data.email;
@@ -105,10 +104,7 @@ export class ProfileComponent implements OnInit {
   
   }
 
-  onSave(): void {
-    
-  }
-
+ 
   
 
 }

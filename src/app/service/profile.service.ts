@@ -52,4 +52,15 @@ export class ProfileService {
     return this.httpclient.post("	http://juegostudio.in:3021/user/profile",null,httpOptions)
 
   }
+
+  updateProfile(updatedDetails, accessToken){
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Authorization':accessToken
+      })
+    };
+    const headers = new HttpHeaders({'Authorization':accessToken});
+    return this.httpclient.post('http://juegostudio.in:3021/user/profileUpdate',updatedDetails,httpOptions)
+  }
 }
