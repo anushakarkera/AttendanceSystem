@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule} from '@angular/forms';
-
+import { StorageServiceModule } from 'ngx-webstorage-service';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { ProfileComponent } from './profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,8 +27,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {HttpClientModule} from  '@angular/common/http';
 import { from } from 'rxjs';
-import { OtpComponent } from './otp/otp.component';
-import { NewpasswordComponent } from './newpassword/newpassword.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,9 +41,7 @@ import { NewpasswordComponent } from './newpassword/newpassword.component';
     DateselectorComponent,
     ConfirmDialogComponent,
     ForgotPasswordComponent,
-    MainNavComponent,
-    OtpComponent,
-    NewpasswordComponent
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +59,8 @@ import { NewpasswordComponent } from './newpassword/newpassword.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    StorageServiceModule
   ],
   entryComponents: [
     UploadProfileComponent,
