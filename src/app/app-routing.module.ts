@@ -12,6 +12,8 @@ import { ListComponent } from './list/list.component';
 import { LoginComponent } from './login/login.component';
 import { OverlayComponent } from './overlay/overlay.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { OtpComponent } from './otp/otp.component';
+import { NewpasswordComponent } from './newpassword/newpassword.component';
 
 
 const routes: Routes = [
@@ -22,7 +24,9 @@ const routes: Routes = [
   { path:'login', component: LoginComponent},
   { path: 'overlay', component: OverlayComponent},
   { path: 'forgotpassword', component: ForgotPasswordComponent},
-  { path: '', component:LoginComponent}
+  { path: '', component:LoginComponent},
+  { path: 'otp', component:OtpComponent},
+  { path: 'newpassword', component:NewpasswordComponent}
 ];
 
 
@@ -40,5 +44,7 @@ export class AppRoutingModule { }
    ClasslistComponent,
    LoginComponent,
    OverlayComponent,
-   ForgotPasswordComponent
+   ForgotPasswordComponent,
+   OtpComponent,
+   NewpasswordComponent
  ];

@@ -23,26 +23,7 @@ export class LoginService {
   }
 
   verifyLogin(name: string, pass: string) {
-   this.httpclient.post("http://juegostudio.in:3021/user/login", {"email":name , "password":pass}).pipe(
-      
-      catchError((error: HttpErrorResponse) =>this.handleError(error))
-      )
-    
-    .subscribe((data: any) => {if(data.code == 200){
-      this.success = true;
-      this.access_token = data.data.userToken;
-    }},
-      (error: any) => console.log('http error',error)
-    
-    );;
-    return this.success;
-  }
-  handleError(error: HttpErrorResponse){
-    if(error.status == 401){
-      this.success=false;
-    }else{
-      return Observable.throw(error);
-    }
+   return this.httpclient.post("http://juegostudio.in:3021/user/login", {"email":name , "password":pass})
   }
 
   
