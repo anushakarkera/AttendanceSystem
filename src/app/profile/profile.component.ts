@@ -78,7 +78,7 @@ export class ProfileComponent implements OnInit {
       this.Phone = data.data.phone;
       this.Gender = data.data.gender;
       this.City = data.data.city;
-      console.log(this.FullName,this.Email,this.Phone);
+      console.log(this.Gender);
     });
   }
   get fval(){
