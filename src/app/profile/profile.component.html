@@ -9,24 +9,24 @@
     </div>
     <form id="form" [formGroup] = "profileForm" (ngSubmit)="userDetails()">
         <div id="Name">
-            <input class="name" type="text" value = {{FullName}} id="userName" formControlName = "fullName" [ngClass] = "{'is-invalid': submitted && fval.name.errors}" readonly>
-            <div *ngIf="submitted && fval.name.errors" class="invalid-feedback">
-                <div *ngIf="fval.name.errors.required">Name is required</div>
+            <input class="name" type="text" [(ngModel)] = "FullName"  id="userName" formControlName = "fullName" [ngClass] = "{'is-invalid': submitted && fval.fullName.errors}" >
+            <div *ngIf="submitted && fval.fullName.errors" class="invalid-feedback">
+                <div *ngIf="fval.fullName.errors.required">Name is required</div>
             </div>
         </div>
         <div id="Email">
-            <input class="email" type="email" formControlName = "email" value = {{Email}} id="Email_id"  [ngClass] = "{'is-invalid': submitted && fval.email.errors}" readonly>
+            <input class="email" type="email" formControlName = "email" [(ngModel)] = "Email" id="Email_id"  [ngClass] = "{'is-invalid': submitted && fval.email.errors}" >
             <div *ngIf="submitted && fval.email.errors" class="invalid-feedback">
                 <div *ngIf="fval.email.errors.required">Email is required</div>
                 <div *ngIf="fval.email.errors.email">Enter the valid email address</div>
             </div>
         </div>
         <div id="PhoneNo">
-            <input class="phno" type="number" value = {{Phone}} id="phone" formControlName = "phone">
+            <input class="phno" type="number" [(ngModel)] = "Phone" id="phone" formControlName = "phone">
         </div>
         
         <div id="Gender">
-            <select class="gender" formControlName = "gender" required>
+            <select class="gender" formControlName = "gender" required [(ngModel)] = "Gender">
                 <option value="" disabled>{{Gender}}</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -34,8 +34,8 @@
         </div>
 
         <div id="City">
-            <select class="city" formControlName = "city" required>
-                <option class="current_city" value="" disabled selected hidden > {{City}}</option>
+            <select class="city" formControlName = "city" required [(ngModel)] = "City">
+                <option class="current_city" value ="" disabled selected hidden > {{City}}</option>
                 <option value="mangalore">Mangalore</option>
                 <option value="bangalore">Bangalore</option>
                 <option value="mysore">Mysore</option>

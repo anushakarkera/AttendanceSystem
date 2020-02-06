@@ -30,11 +30,11 @@ export class ProfileComponent implements OnInit {
   submitted = false;
 
   userDetails(event){
-    // event.preventDefault()
-    // const target = event.target
-    // const name = target.querySelector('#userName').value
-    // const email = target.querySelector('#Email_id').value
-    // const phno = target.querySelector('#phone_no').value
+    //  event.preventDefault()
+    //  const target = event.target
+    //  const name = target.querySelector('#userName').value
+    //  const email = target.querySelector('#Email_id').value
+    //  const phno = target.querySelector('#phone_no').value
 
     // console.log(name)
     // console.log(email)
@@ -42,7 +42,7 @@ export class ProfileComponent implements OnInit {
 
     // this._profileService.getProfileDetails()
     // .then(data =>   console.log(data));
-
+    alert("Profile updated!")
     this.submitted = true;
     // console.log(this.profileForm.value);
     console.log(this.profileForm.value)
@@ -60,8 +60,8 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void{
     this.profileForm = this.formBuilder.group({
-      // fullName: ['',Validators.required],
-      // email: ['',[Validators.required,Validators.email]],
+      fullName: ['',Validators.required],
+      email: ['',[Validators.required,Validators.email]],
       phone: ['',Validators.compose([Validators.required,Validators.minLength(10),Validators.maxLength(12),Validators.pattern('[0-9]+')])],
       gender : ['',Validators.required],
       city : ['',Validators.required]
