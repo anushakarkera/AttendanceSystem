@@ -11,19 +11,28 @@ import { LoginService } from './../service1/login.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  public accessToken : String;
+  accessToken : String = localStorage.getItem('access_token');
+  classId : string = "5e329ed395efa80dd8b81c01";
+
   constructor(public dialog: MatDialog, private myservice: StudentlistService) { }
 // {usn:"05",name:"kushal", isPresent : true},
 // {usn:"05",name:"kushal", isPresent : true},
 // {usn:"05",name:"kushal", isPresent : true},
 // {usn:"05",name:"kushal", isPresent : true}];
+  public Name: [];
+  
   public student_list;
   ngOnInit() {
     this.student_list=this.myservice.getStudentList();
+     
+    this.myservice.getDetails(this.accessToken, this.classId)
+    .subscribe((data : any)=> {
+      this.Name = data.data,
+    
 
-    this.myservice.getDetails(this.accessToken)
-    .subscribe(data => console.log(data));
+    console.log(this.Name)});
   }
+  
   // onClick()
   // {\
   //   console.log(this.student_list)

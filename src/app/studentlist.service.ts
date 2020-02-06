@@ -18,7 +18,7 @@ export class StudentlistService {
   constructor( private httpclient : HttpClient) { }
 
 
-  getDetails(accessToken) {
+  getDetails(accessToken, classId) {
 
     const httpOptions = {
       headers: new HttpHeaders({
@@ -27,7 +27,7 @@ export class StudentlistService {
       })
     };
     const headers = new HttpHeaders({'Authorization':accessToken});
-    return this.httpclient.post("http://juegostudio.in:3021/student/list",null,httpOptions);
+    return this.httpclient.post("http://juegostudio.in:3021/student/list",{"classSubjectID" : classId},httpOptions)
   }
 
 

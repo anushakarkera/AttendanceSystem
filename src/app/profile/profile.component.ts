@@ -18,7 +18,7 @@ export class ProfileComponent implements OnInit {
   imageUrl : string = "/assets/profile-image/profileImage.jpg"; 
   DialogService: any;
 
-  accessToken : String = this._loginService.getAccessToken();
+  accessToken : String = localStorage.getItem('access_token');
 
   public FullName : string;
   public Email : string;
@@ -68,6 +68,7 @@ export class ProfileComponent implements OnInit {
  
     });
     console.log(this.profileForm.value)
+    // console.log(localStorage.getItem('access_token'))
 
     
     this._profileService.getProfileDetails(this.accessToken )
