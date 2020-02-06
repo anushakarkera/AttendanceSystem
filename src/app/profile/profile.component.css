@@ -39,6 +39,7 @@
 }
 .gender{
     width: 80%;
+    color: black;
     margin: 2px 0;
     display: inline-block;
     border: 1px solid #ccc;
