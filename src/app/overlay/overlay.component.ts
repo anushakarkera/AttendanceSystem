@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OverlayComponent implements OnInit {
   imageUrl : string = "/assets/profile-image/profileImage.jpg";
-  public name="ABDUL AFFOU";
+  public name="UNKNOWN";
 
   constructor() { }
 
   ngOnInit() {
   }
-
+  
 }

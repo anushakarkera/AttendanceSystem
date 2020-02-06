@@ -14,7 +14,13 @@
 }
 
 
+.fa-heart {
+    color: #ccc;
+}
 
+.fa-heart.active {
+    color: #ffff;
+}
 
 
 
