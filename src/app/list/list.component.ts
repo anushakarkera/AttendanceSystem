@@ -4,13 +4,14 @@ import { CheckboxControlValueAccessor } from '@angular/forms';
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 import { MatDialog } from '@angular/material';
 import { StudentlistService } from './../studentlist.service';
+import { LoginService } from './../service1/login.service';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-
+  public accessToken : String;
   constructor(public dialog: MatDialog, private myservice: StudentlistService) { }
 // {usn:"05",name:"kushal", isPresent : true},
 // {usn:"05",name:"kushal", isPresent : true},
@@ -20,7 +21,7 @@ export class ListComponent implements OnInit {
   ngOnInit() {
     this.student_list=this.myservice.getStudentList();
 
-    this.myservice.getDetails()
+    this.myservice.getDetails(this.accessToken)
     .subscribe(data => console.log(data));
   }
   // onClick()

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +16,18 @@ export class StudentlistService {
   { usn:"09",name:"Yajna", isPresent : true},
   {usn:"10",name:"kushal", isPresent : true}];
   constructor( private httpclient : HttpClient) { }
-  getDetails() {
-    return this.httpclient.post("http://dummy.restapiexample.com/api/v1/create",{ });
+
+
+  getDetails(accessToken) {
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Authorization':accessToken
+      })
+    };
+    const headers = new HttpHeaders({'Authorization':accessToken});
+    return this.httpclient.post("http://juegostudio.in:3021/student/list",null,httpOptions);
   }
 
 
