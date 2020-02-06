@@ -29,4 +29,7 @@ export class OverlayComponent implements OnInit {
     // });
   console.log("works")
   }
+  onClick(){
+    localStorage.clear();
+  }
 }
