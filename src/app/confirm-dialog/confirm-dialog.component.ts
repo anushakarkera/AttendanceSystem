@@ -2,6 +2,7 @@ import { ListComponent } from './../list/list.component';
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { StudentlistService } from './../studentlist.service';
+import { LoginService } from './../service1/login.service';
 @Component({
   selector: 'app-confirm-dialog',
   templateUrl: './confirm-dialog.component.html',
@@ -17,15 +18,22 @@ export class ConfirmDialogComponent implements OnInit {
   onNoClick(){
     this.dialogRef.close();
   }
+
+  public accessToken : string = localStorage.getItem('access_token');
+  public classID : string = "5e329ed395efa80dd8b81c01";
+  public time : string = "09:00 AM" ;
   
   confirmation(): void{
-    this.student_list=this.myservice.getStudentList();
+    this.myservice.getStudentList();
     for(let student of this.student_list){
       if(student.isPresent == false){
         console.log(student.usn);
       }
     }
     this.dialogRef.close();
+
+    this.myservice.onConfirm(this.accessToken,this.classID,this.time)
+
 
   }
 }

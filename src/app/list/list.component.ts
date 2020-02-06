@@ -38,7 +38,7 @@ export class ListComponent implements OnInit {
   //   console.log(this.student_list)
   // }
    setColor(index) {
-    this.myservice.updateStudentList(index);
+    
     //     status = e.target.classList.contains('active');
   
     // e.target.classList.add(status ? 'inactive' : 'active');
