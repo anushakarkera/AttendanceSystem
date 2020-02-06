@@ -2,6 +2,7 @@ import { ListComponent } from './../list/list.component';
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { StudentlistService } from './../studentlist.service';
+import { element } from 'protractor';
 @Component({
   selector: 'app-confirm-dialog',
   templateUrl: './confirm-dialog.component.html',
@@ -19,13 +20,14 @@ export class ConfirmDialogComponent implements OnInit {
   }
   
   confirmation(): void{
-    this.student_list=this.myservice.getStudentList();
-    for(let student of this.student_list){
-      if(student.isPresent == false){
-        console.log(student.usn);
-      }
-    }
-    this.dialogRef.close();
+  //   this.student_list=getStudentList();
+  //   for(let student of this.student_list){
+  //     if(student.isPresent == false){
+  //       console.log(student.usn);
+  //     }
+  //   }
+  //   this.dialogRef.close();
 
-  }
+  // }
+}
 }
