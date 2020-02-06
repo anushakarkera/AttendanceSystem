@@ -5,6 +5,7 @@ import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.compone
 import { MatDialog } from '@angular/material';
 import { StudentlistService } from './../studentlist.service';
 import { LoginService } from './../service1/login.service';
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',

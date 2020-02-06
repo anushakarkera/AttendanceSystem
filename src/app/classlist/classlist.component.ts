@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+import { ClasslistserviceService} from './../classlistservice.service';
 
 
 @Component({
@@ -8,29 +9,11 @@ import { Router } from "@angular/router";
   styleUrls: ['./classlist.component.css']
 })
 export class ClasslistComponent implements OnInit {
-  // accessToken : String = this.classlistService.getAccessToken();
+
+  accessToken : String = localStorage.getItem('access_token');
 
         
-           public classSubjectId: string;
-            public className:string; 
-            public roomNumber:string;
-            public subjectName: string;
-            public time: string;
-            public attendanceTaken:string;
-      
-
-          //   this._profileService.getclasslistDetails(this.accessToken )
-          //   .subscribe((data : any) =>  {
-          //     this.classSubjectId = data.data.classSubjectId;
-          //     this.className = data.data.className;
-          //     this.roomNumber = data.data.roomNumber;
-          //     this.subjectName = data.data.subjectName;
-          //     this.time= data.data.time;
-          //     this.attendanceTaken=data.data.attendanceTaken;
-          //     console.log(this.FullName,this.Email,this.Phone);
-          //   });
-          // }
-
+         
 
   classes =[
     { 
@@ -69,16 +52,40 @@ subjectName:"english"
 subjectName:"english"
   }
   ]
-  getClasslist(){}
   
 
   
-  constructor(private router : Router) { }
+  constructor(private router : Router,private lservice:ClasslistserviceService) { }
+ 
+  public classSubjectId: [];
+   public className:[]; 
+   public roomNumber:[];
+   public subjectName: [];
+   public time:[];
+   public attendanceTaken:[];
+
+   public class_list;
+
 
   ngOnInit() {
+
+    // this.class_list=this.lservice.getList();
+     
+    this.lservice.getClasslist(this.accessToken)
+    .subscribe((data : any)=> {
+      this.classSubjectId = data.data.classSubjectId;
+              this.className = data.data.className;
+              this.roomNumber = data.data.roomNumber;
+              this.subjectName = data.data.subjectName;
+              this.time= data.data.time;
+              this.attendanceTaken=data.data.attendanceTaken;
+    
+
+    // console.log(this.Name)
+  });
   }
-  onClick(){
-    this.router.navigate(['/studentlist']);
-  }
+  // onClick(){
+  //   this.router.navigate(['/studentlist']);
+  // }
 
 }
