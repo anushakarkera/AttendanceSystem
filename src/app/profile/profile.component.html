@@ -26,8 +26,8 @@
         </div>
         
         <div id="Gender">
-            <select class="city" formControlName = "gender" required >
-                <option value ="" disabled selected hidden >{{Gender}}</option>
+            <select class="gender" formControlName = "gender" required  [(ngModel)] = "Gender">
+                <option  [ngValue] = "Gender" disabled selected hidden >{{Gender}}</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
             </select>
@@ -35,8 +35,8 @@
      
 
         <div id="City">
-            <select class="city" formControlName = "city" required >
-                <option value ="" disabled selected hidden >{{City}}</option>
+            <select class="city" formControlName = "city" required   [(ngModel)] = "City">
+                <option  [ngValue] = "City" disabled selected hidden >{{City}}</option>
                 <option value="mangalore">Mangalore</option>
                 <option value="bangalore">Bangalore</option>
                 <option value="mysore">Mysore</option>
