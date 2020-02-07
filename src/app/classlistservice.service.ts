@@ -8,10 +8,16 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
 export class ClasslistserviceService {
-  class_list=[];
+ public class_list=[ { 
+        classSubjectId :"10:00 AM",
+      className:"201",
+        roomNumber:"LH101",
+     subjectName:"534NCD",
+ time:"english"
+      }];
 
   constructor(private httpclient : HttpClient) { }
-  getClasslist(accessToken) {
+  getClasslist(accessToken,date) {
 
     const httpOptions = {
       headers: new HttpHeaders({
@@ -20,7 +26,7 @@ export class ClasslistserviceService {
       })
     };
     const headers = new HttpHeaders({'Authorization':accessToken});
-    return this.httpclient.post("http://juegostudio.in:3021/user/timeTable",httpOptions)
+    return this.httpclient.post("http://juegostudio.in:3021/user/timeTable",{"date":date}, httpOptions)
   }
   getList(){
     return this.class_list;

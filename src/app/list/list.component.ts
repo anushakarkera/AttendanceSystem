@@ -16,7 +16,7 @@ export class ListComponent implements OnInit {
   classId : string = "5e329ed395efa80dd8b81c01";
 
   constructor(public dialog: MatDialog, private myservice: StudentlistService) { }
-// {usn:"05",name:"kushal", isPresent : true},
+//  {usn:"05",name:"kushal", isPresent : true},
 // {usn:"05",name:"kushal", isPresent : true},
 // {usn:"05",name:"kushal", isPresent : true},
 // {usn:"05",name:"kushal", isPresent : true}];
