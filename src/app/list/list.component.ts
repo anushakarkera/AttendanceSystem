@@ -24,14 +24,35 @@ export class ListComponent implements OnInit {
   
   public student_list;
   ngOnInit() {
-    this.student_list=this.myservice.getStudentList();
+    //this.student_list=this.myservice.getStudentList();
      
     this.myservice.getDetails(this.accessToken, this.classId)
     .subscribe((data : any)=> {
-      this.Name = data.data,
-    
+      this.student_list = data.data,
+    this.addStatus();
 
     console.log(this.Name)});
+  }
+
+  addStatus(){
+    this.student_list.forEach(function (element) {
+      element.isPresent = "true";
+    });
+  }
+
+  updateStudentList(usn: number){
+    this.student_list[usn].isPresent=!this.student_list[usn].isPresent;
+    // console.log(this.student_list[usn].name, this.student_list[usn].isPresent)
+    for(let student of this.student_list){
+      if(student.isPresent == false){
+        console.log(student.name);
+      }
+    }
+  }
+
+  getStudentList(){
+    return this.student_list;
+    
   }
   
   // onClick()
@@ -39,7 +60,8 @@ export class ListComponent implements OnInit {
   //   console.log(this.student_list)
   // }
    setColor(index) {
-    this.myservice.updateStudentList(index);
+   
+    this.updateStudentList(index);
     //     status = e.target.classList.contains('active');
   
     // e.target.classList.add(status ? 'inactive' : 'active');

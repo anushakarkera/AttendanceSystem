@@ -32,11 +32,11 @@ export class StudentlistService {
 
 
 
-  getStudentList(){
-    return this.student_list;
-  }
-  updateStudentList(usn: number){
-    this.student_list[usn].isPresent=!this.student_list[usn].isPresent;
+  // getStudentList(){
+  //   return this.student_list;
+  // }
+  // updateStudentList(usn: number){
+  //   this.student_list[usn].isPresent=!this.student_list[usn].isPresent;
     // console.log(this.student_list[usn].name, this.student_list[usn].isPresent)
   }
   // getAbsentess(): Array<string>{
@@ -48,4 +48,4 @@ export class StudentlistService {
   //   }
   //   return absentees;
   // }
-}
+
