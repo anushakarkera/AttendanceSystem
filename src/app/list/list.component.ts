@@ -41,12 +41,12 @@ export class ListComponent implements OnInit {
 
   updateStudentList(usn: number){
     this.student_list[usn].isPresent=!this.student_list[usn].isPresent;
-    // console.log(this.student_list[usn].name, this.student_list[usn].isPresent)
-    for(let student of this.student_list){
-      if(student.isPresent == false){
-        console.log(student.name);
-      }
-    }
+    // console.log(this.student_list[usn].name, this.student_list[usn].isPresent)}
+    // for(let student of this.student_list){
+    //   if(student.isPresent == false){
+    //     console.log(student.name);
+    //   }
+    // }
   }
 
   getStudentList(){
@@ -81,6 +81,8 @@ export class ListComponent implements OnInit {
       console.log(results);
       
     });
+    
+    console.log(this.student_list);
   }
 }
 

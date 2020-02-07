@@ -18,7 +18,6 @@ export class ConfirmDialogComponent implements OnInit {
   onNoClick(){
     this.dialogRef.close();
   }
-  
   confirmation(): void{
   //   this.student_list=getStudentList();
   //   for(let student of this.student_list){
@@ -27,7 +26,9 @@ export class ConfirmDialogComponent implements OnInit {
   //     }
   //   }
   //   this.dialogRef.close();
+  
 
   // }
+
 }
 }
