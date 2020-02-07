@@ -16,6 +16,7 @@ import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 export class ListComponent implements OnInit {
   accessToken : String = localStorage.getItem('access_token');
   classId : string = "5e329ed395efa80dd8b81c01";
+  public absentees = [];
 
   constructor(public dialog: MatDialog, private myservice: StudentlistService) {
     
@@ -74,15 +75,15 @@ confirmation() : void{
   console.log("confirmation works")
 }
 
- public absentees;
+
 
 confirmList(): void {
   for(let student of this.student_list){
     if(student.isPresent == false){
-       this.absentees = student.name;
+       this.absentees.push(student.studentID);
     }
   }
-  console.log(this.absentees)
+  // console.log(this.absentees)
   const dialogRef = this.dialog.open(ConfirmDialogComponent, {
     panelClass: 'custom-modelBox',
     width: "390px",
