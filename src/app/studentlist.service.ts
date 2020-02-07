@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,6 @@ export class StudentlistService {
   // { usn:"09",name:"Yajna", isPresent : true},
   // {usn:"10",name:"kushal", isPresent : true}];
   constructor( private httpclient : HttpClient) { }
-
   getDetails(accessToken, classId) {
 
     const httpOptions = {
@@ -30,6 +30,7 @@ export class StudentlistService {
   }
 
 
+  
 
   // getStudentList(){
   //   return this.student_list;
