@@ -4,7 +4,7 @@ import { MatDialog } from '@angular/material';
 import { FormBuilder, FormGroup,Validators, FormControl } from '@angular/forms';
 import { UploadProfileComponent } from '../upload-profile/upload-profile.component';
 import { ProfileService } from '../service/profile.service';
-
+// import { Router } from '@angular/router';
 
 
 
@@ -13,6 +13,8 @@ import { ProfileService } from '../service/profile.service';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
+
+
 export class ProfileComponent implements OnInit {
   
   imageUrl : string = "/assets/profile-image/profileImage.jpg"; 
@@ -20,14 +22,18 @@ export class ProfileComponent implements OnInit {
 
   accessToken : String = localStorage.getItem('access_token');
 
-  public FullName : string;
-  public Email : string;
-  public Phone : string;
-  public Gender : string;
-  public City : string; 
+
+  
+  public FullName:string;
+  public Email:string;
+  public Phone:string;
+  public Gender:string;
+  public City:string;
 
   profileForm: FormGroup;
   submitted = false;
+  
+
 
   userDetails(event){
     //  event.preventDefault()
@@ -53,12 +59,15 @@ export class ProfileComponent implements OnInit {
   }
   
   constructor(
+   
     public dialog: MatDialog, 
     private _profileService : ProfileService,
     private formBuilder : FormBuilder, 
     private _loginService : LoginService) { }
 
+
   ngOnInit(): void{
+  
     this.profileForm = this.formBuilder.group({
       fullName: ['',Validators.required],
       email: ['',[Validators.required,Validators.email]],
@@ -71,6 +80,7 @@ export class ProfileComponent implements OnInit {
     // console.log(localStorage.getItem('access_token'))
 
     
+    
     this._profileService.getProfileDetails(this.accessToken )
     .subscribe((data : any) =>  {
       this.FullName = data.data.fullName;
@@ -81,9 +91,11 @@ export class ProfileComponent implements OnInit {
       console.log(this.Gender);
     });
   }
+  
   get fval(){
     return this.profileForm.controls;
   }
+
 
   openDialog(): void {
     const dialogRef = this.dialog.open(UploadProfileComponent, {
@@ -104,8 +116,10 @@ export class ProfileComponent implements OnInit {
     });
   
   }
+  }
+
 
  
   
 
-}
+

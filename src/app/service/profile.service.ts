@@ -22,6 +22,7 @@ export interface IProfile {
 })
 export class ProfileService {
 
+ 
   public profile_info: any;
   auth: any;
   constructor(private http: Http,private httpclient : HttpClient) { 
